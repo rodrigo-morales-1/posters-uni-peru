@@ -1,6 +1,9 @@
 \documentclass{article}
 
+% The package amsmath defines the environment equation*
 \usepackage{amsmath}
+% The package amssymb adds the macro mathbb
+\usepackage{amssymb}
 
 \begin{document}
 
@@ -69,11 +72,11 @@ Identidades trigonométricas auxiliares
 \end{equation*}
 
 \begin{equation*}
-  \sec\left(x\right) + \tan\left(x\right) = m \Rightarrow \sec\left(x\right) - \tan\left(x\right) = \frac{1}{m}
+  \sec\left(x\right) + \tan\left(x\right) = m \rightarrow \sec\left(x\right) - \tan\left(x\right) = \frac{1}{m}
 \end{equation*}
 
 \begin{equation*}
-  \csc\left(x\right) + \cot\left(x\right) = m \Rightarrow \csc\left(x\right) - \cot\left(x\right) = \frac{1}{m}
+  \csc\left(x\right) + \cot\left(x\right) = m \rightarrow \csc\left(x\right) - \cot\left(x\right) = \frac{1}{m}
 \end{equation*}
 
 \begin{equation*}
@@ -81,8 +84,71 @@ Identidades trigonométricas auxiliares
 \end{equation*}
 
 \begin{equation*}
-  a \cdot \sin\left(x\right) + b \cos\left(x\right) = c \land c = \sqrt{a^2 + b^2} \Rightarrow \sin\left(x\right) = \frac{a}{c} \land \cos\left(x\right) = \frac{b}{c}
+  a \cdot \sin\left(x\right) + b \cos\left(x\right) = c \land c = \sqrt{a^2 + b^2} \rightarrow \sin\left(x\right) = \frac{a}{c} \land \cos\left(x\right) = \frac{b}{c}
 \end{equation*}
+
+Identidades trigonométricas de la suma y diferencia de dos arcos
+
+\begin{equation*}
+  \sin \left(x \pm y\right) = \sin\left(x\right) \cos\left(y\right) \pm \cos\left(x\right) \sin\left(y\right)
+\end{equation*}
+
+\begin{equation*}
+  \cos \left(x \pm y\right) = \cos\left(x\right) \cos\left(y\right) \mp \sin\left(x\right) \sin\left(y\right)
+\end{equation*}
+
+\begin{equation*}
+  \tan \left(x \pm y\right) = \frac{\tan\left(x\right)\pm \tan\left(y\right)}{1 \mp \tan\left(x\right) \tan\left(y\right)}
+\end{equation*}
+
+Identidades trigonométricas auxiliares para la suma y diferencia de dos arcos
+
+\begin{equation*}
+  \sin\left(x + y\right) \cdot \sin\left(x - y\right) = \sin^2\left(x\right) - \sin^2\left(y\right)
+\end{equation*}
+
+\begin{equation*}
+  \cos\left(x + y\right) \cdot \cos\left(x - y\right) = \cos^2\left(x\right) - \sin^2\left(y\right)
+\end{equation*}
+
+\begin{equation*}
+  \tan\left(\theta\right) = \frac{b}{a} \leftrightarrow a \cdot \sin\left(x\right) \pm b \cdot \cos\left(x\right) = \sqrt{a^2 + b^2} \cdot \sin\left(x \pm \theta\right)
+\end{equation*}
+
+\begin{equation*}
+  \forall x \in \mathbb{R} : - \sqrt{a^2 + b^2} \leq a \cdot \sin\left(x\right) + b \cdot \cos\left(x\right) \leq \sqrt{a^2 + b^2}
+\end{equation*}
+
+\begin{equation*}
+  \tan\left(x \pm y\right) = \tan\left(x\right) \pm \tan\left(y\right) \pm \tan\left(x\right) \tan\left(y\right) \tan\left(x \pm y\right)
+\end{equation*}
+
+Identidades trigonométricas para tres arcos
+
+\begin{alignat*}{2}
+  x + y + z = k \pi \land k \in \mathbb{Z} \rightarrow & \tan\left(x\right) + \tan\left(y\right) + \tan\left(z\right) = \tan\left(x\right) \tan\left(y\right) \tan\left(z\right)
+  \\ & \land \cot\left(x\right) \cot\left(y\right) + \cot\left(y\right) \cot\left(z\right) + \cot\left(z\right) \cot\left(x\right) = 1
+\end{alignat*}
+
+\begin{alignat*}{2}
+  x + y + z = \frac{\left(2k+1\right) \pi}{2} \land k \in \mathbb{Z} \rightarrow & \cot\left(x\right) + \cot\left(y\right) + \cot\left(z\right) = \cot\left(x\right) \cot\left(y\right) \cot\left(z\right)
+  \\ & \land \tan\left(x\right) \tan\left(y\right) + \tan\left(y\right) \tan\left(z\right) + \tan\left(z\right) \tan\left(x\right) = 1
+\end{alignat*}
+
+Identidades trigonométricas del arco doble
+
+\begin{equation*}
+  \sin\left(2x\right) = 2 \sin\left(x\right) \cos\left(x\right)
+\end{equation*}
+
+\begin{equation*}
+  \cos\left(2x\right) = \cos^2\left(x\right) - \sin^2\left(x\right)
+\end{equation*}
+
+\begin{equation*}
+  \tan\left(2x\right) = \frac{2 \tan\left(x\right)}{1 - \tan^2\left(x\right)}
+\end{equation*}
+
 
 \end{document}
 
