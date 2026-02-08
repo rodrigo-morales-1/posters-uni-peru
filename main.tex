@@ -6,93 +6,93 @@
 \usepackage{amssymb}
 % The package amssymb adds the macro \degree
 \usepackage{gensymb}
-\usepackage{multicol}
+\usepackage{multicolrule}
+\columnseprule=0.5pt
 \usepackage{parskip}
 % The package geometry allows to reduce the margin
 \usepackage[
+    a2paper,
     top=0.5cm,
     left=0.5cm,
     right=0.5cm,
     bottom=1.5cm
 ]{geometry}
 
-\usepackage{titlesec}
-\titleformat{\section}  % which section command to format
-  {\fontsize{8}{10}\bfseries} % format for whole line
-  {\thesection} % how to show number
-  {1em} % space between number and text
-  {} % formatting for just the text
-  [] % formatting for after the text
+%% \usepackage{titlesec}
+%% \titleformat{\section}  % which section command to format
+%%   {\fontsize{8}{10}\bfseries} % format for whole line
+%%   {\thesection} % how to show number
+%%   {1em} % space between number and text
+%%   {} % formatting for just the text
+%%   [] % formatting for after the text
 
-\titleformat{\subsection}
-  {\fontsize{8}{10}\bfseries} % format for whole line
-  {\thesubsection} % how to show number
-  {1em} % space between number and text
-  {} % formatting for just the text
-  [] % formatting for after the text
+%% \titleformat{\subsection}
+%%   {\fontsize{8}{10}\bfseries} % format for whole line
+%%   {\thesubsection} % how to show number
+%%   {1em} % space between number and text
+%%   {} % formatting for just the text
+%%   [] % formatting for after the text
+
+\usepackage{tcolorbox}
+
+\newtcbox{\mybox}{
+    on line,
+    colback=blue!50,
+    colframe=blue!50,
+    fontupper=\color{white},
+    boxrule=0.5pt,
+    arc=2pt,
+    boxsep=0pt,
+    left=1pt,
+    right=1pt,
+    top=2pt,
+    bottom=1pt
+}
+
+\newcommand\myequal{\mathrel{\mybox{$=$}}}
 
 \begin{document}
+\fontsize{12pt}{12pt}\selectfont
+
 \begin{multicols}{3}
-
-\scriptsize
-
 \section{Identidades trigonométricas de ángulos simples}
 
 Identidades de recíprocas
 
-\begin{equation*}
-    \begin{aligned}
-        \sin\left(x\right) \cdot \csc\left(x\right) &= 1 \\
-        \cos\left(x\right) \cdot \sec\left(x\right) &= 1 \\
-        \tan\left(x\right) \cdot \cot\left(x\right) &= 1
-    \end{aligned}
-\end{equation*}
+\begin{itemize}
+    \item $\sin\left(x\right) \cdot \csc\left(x\right) \myequal 1$
+    \item $\cos\left(x\right) \cdot \sec\left(x\right) \myequal 1$
+    \item $\tan\left(x\right) \cdot \cot\left(x\right) \myequal 1$
+\end{itemize}
 
 Identidades por división
 
-\begin{equation*}
-    \begin{aligned}
-        \tan\left(x\right) &= \frac{\sin\left(x\right)}{\cos\left(x\right)} \\
-        \cot\left(x\right) &= \frac{\cos\left(x\right)}{\sin\left(x\right)}
-    \end{aligned}
-\end{equation*}
+\begin{itemize}
+    \item $\tan\left(x\right) = \dfrac{\sin\left(x\right)}{\cos\left(x\right)}$
+    \item $\cot\left(x\right) = \dfrac{\cos\left(x\right)}{\sin\left(x\right)}$
+\end{itemize}
 
 Identidades pitagóricas
 
-\begin{equation*}
-    \begin{aligned}
-        \sin^2\left(x\right) + \cos^2\left(x\right) &= 1 \\
-        \sec^2\left(x\right) + \tan^2\left(x\right) &= 1 \\
-        \csc^2\left(x\right) + \cot^2\left(x\right) &= 1
-    \end{aligned}
-\end{equation*}
+\begin{itemize}
+    \item $\sin^2\left(x\right) + \cos^2\left(x\right) = 1$
+    \item $\sec^2\left(x\right) + \tan^2\left(x\right) = 1$
+    \item $\csc^2\left(x\right) + \cot^2\left(x\right) = 1$
+\end{itemize}
 
 Identidades auxiliares
 
-\begin{equation*}
-    \begin{aligned}
-        \left( \sin\left(x\right) \pm \cos\left(x\right) \right)^2 &= 1 \pm 2 \sin\left(x\right) \cos\left(x\right) \\
-        \sin^4\left(x\right) + \cos^4\left(x\right) &= 1 - 2 \sin^2\left(x\right) \cos^2\left(x\right) \\
-        \sin^6\left(x\right) + \cos^6\left(x\right) &= 1 - 3 \sin^2\left(x\right) \cos^2\left(x\right) \\
-        \tan\left(x\right) + \cot\left(x\right) &= \sec\left(x\right) \csc\left(x\right) \\
-        \sec^2 \left(x\right) + \csc^2 \left(x\right) &= \sec^2\left(x\right) \csc^2 \left(x\right)
-    \end{aligned}
-\end{equation*}
-
-\begin{equation*}
-    \begin{aligned}
-        \sec\left(x\right) + \tan\left(x\right) = m &\rightarrow \sec\left(x\right) - \tan\left(x\right) = \frac{1}{m} \\
-        \csc\left(x\right) + \cot\left(x\right) = m &\rightarrow \csc\left(x\right) - \cot\left(x\right) = \frac{1}{m}
-    \end{aligned}
-\end{equation*}
-
-\begin{equation*}
-  \left( 1 + \pm \sin\left(x\right) \pm \cos\left(x\right) \right)^2 = 2 \left(1 \pm \sin\left(x\right)\right) \left(1 \pm \cos\left(x\right)\right)
-\end{equation*}
-
-\begin{equation*}
-  a \cdot \sin\left(x\right) + b \cos\left(x\right) = c \land c = \sqrt{a^2 + b^2} \rightarrow \sin\left(x\right) = \frac{a}{c} \land \cos\left(x\right) = \frac{b}{c}
-\end{equation*}
+\begin{itemize}
+\item $\left( \sin\left(x\right) \pm \cos\left(x\right) \right)^2 = 1 \pm 2 \sin\left(x\right) \cos\left(x\right)$
+\item $\sin^4\left(x\right) + \cos^4\left(x\right) = 1 - 2 \sin^2\left(x\right) \cos^2\left(x\right)$
+\item $\sin^6\left(x\right) + \cos^6\left(x\right) = 1 - 3 \sin^2\left(x\right) \cos^2\left(x\right)$
+\item $\tan\left(x\right) + \cot\left(x\right) = \sec\left(x\right) \csc\left(x\right)$
+\item $\sec^2 \left(x\right) + \csc^2 \left(x\right) = \sec^2\left(x\right) \csc^2 \left(x\right)$
+\item $\sec\left(x\right) + \tan\left(x\right) = m \rightarrow \sec\left(x\right) - \tan\left(x\right) = \dfrac{1}{m}$
+\item $\csc\left(x\right) + \cot\left(x\right) = m \rightarrow \csc\left(x\right) - \cot\left(x\right) = \dfrac{1}{m}$
+\item $\left( 1 + \pm \sin\left(x\right) \pm \cos\left(x\right) \right)^2 = 2 \left(1 \pm \sin\left(x\right)\right) \left(1 \pm \cos\left(x\right)\right)$
+\item $a \cdot \sin\left(x\right) + b \cos\left(x\right) = c \land c = \sqrt{a^2 + b^2} \rightarrow \sin\left(x\right) = \dfrac{a}{c} \land \cos\left(x\right) = \dfrac{b}{c}$
+\end{itemize}
 
 \section{Identidades trigonométricas de ángulos compuestos}
 
@@ -131,12 +131,10 @@ Identidades auxiliares de la suma y diferencia de dos ángulos
 
 Si $\exists k \in \mathbb{Z} \colon x + y + z = k \pi$, entonces:
 
-\begin{equation*}
-    \begin{aligned}
-        \tan\left(x\right) + \tan\left(y\right) + \tan\left(z\right) &= \tan\left(x\right) \tan\left(y\right) \tan\left(z\right)
-        \\ \cot\left(x\right) \cot\left(y\right) + \cot\left(y\right) \cot\left(z\right) + \cot\left(z\right) \cot\left(x\right) &= 1
-    \end{aligned}
-\end{equation*}
+\begin{itemize}
+    \item $\tan\left(x\right) + \tan\left(y\right) + \tan\left(z\right) = \tan\left(x\right) \tan\left(y\right) \tan\left(z\right)$
+    \item $\cot\left(x\right) \cot\left(y\right) + \cot\left(y\right) \cot\left(z\right) + \cot\left(z\right) \cot\left(x\right) = 1$
+\end{itemize}
 
 Si $\exists k \in \mathbb{Z} \colon x + y + z = \displaystyle \frac{\left(2k+1\right) \pi}{2}$, entonces:
 
