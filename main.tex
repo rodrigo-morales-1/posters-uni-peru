@@ -1,4 +1,4 @@
-\documentclass[twocolumn]{article}
+\documentclass{article}
 
 % The package amsmath defines the environment equation*
 \usepackage{amsmath}
@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 % The package amssymb adds the macro \degree
 \usepackage{gensymb}
+\usepackage{multicol}
 \usepackage{parskip}
 % The package geometry allows to reduce the margin
 \usepackage[
@@ -14,13 +15,6 @@
     right=0.5cm,
     bottom=1.5cm
 ]{geometry}
-
-% The variables columnsep sets the horizontal padding for the vertical
-% separator between columns.
-\setlength{\columnsep}{0.2cm}
-% The variable columnseprule sets the width for the vertical separator
-% between columns.
-\setlength{\columnseprule}{0.5pt}
 
 \usepackage{titlesec}
 \titleformat{\section}  % which section command to format
@@ -38,6 +32,8 @@
   [] % formatting for after the text
 
 \begin{document}
+\begin{multicols}{3}
+
 \scriptsize
 
 \section{Identidades trigonométricas de ángulos simples}
@@ -259,4 +255,5 @@ Identidades auxiliares
     \end{aligned}
 \end{equation*}
 
+\end{multicols}
 \end{document}
