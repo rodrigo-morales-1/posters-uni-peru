@@ -1,0 +1,10 @@
+* ¿Cómo contribuir?
+
+2 maneras:
+
+1. Reporta algún error en algún poster o sugiere una mejora creando un *issue* en este repositorio
+   + Para hacer esto, necesitas crear una cuenta de Github
+2. Proponer un cambio haciendo un *pull request*
+   + Para hacer esto, necesitas tener conocimientos del comando =git=
+
+
