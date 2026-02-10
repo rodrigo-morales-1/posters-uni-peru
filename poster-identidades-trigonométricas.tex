@@ -65,6 +65,15 @@
 }
 \newcommand\myrightarrow{\mathrel{\vcenter{\hbox{\usebox\myrightarrowbox}}}}
 
+\newsavebox\mylandbox
+\sbox\mylandbox{%
+    \begin{tikzpicture}
+        \draw[orange, line width = 1.5pt] (0,0) -- (0.15, 0.30) -- (0.3, 0);
+    \end{tikzpicture}%
+}
+
+\newcommand\myland{\mathbin{\vcenter{\hbox{\usebox\mylandbox}}}}
+
 % +--------------------------------------------------
 % |
 % | Inicio del documento
@@ -111,7 +120,7 @@ Identidades auxiliares
     \item $\sec\left(x\right) + \tan\left(x\right) \myequal m \myrightarrow \sec\left(x\right) - \tan\left(x\right) \myequal \dfrac{1}{m}$
     \item $\csc\left(x\right) + \cot\left(x\right) \myequal m \myrightarrow \csc\left(x\right) - \cot\left(x\right) \myequal \dfrac{1}{m}$
     \item $\left( 1 + \pm \sin\left(x\right) \pm \cos\left(x\right) \right)^2 \myequal 2 \left(1 \pm \sin\left(x\right)\right) \left(1 \pm \cos\left(x\right)\right)$
-    \item $a \cdot \sin\left(x\right) + b \cos\left(x\right) = c \land c = \sqrt{a^2 + b^2} \\ \myrightarrow  \sin\left(x\right) \myequal \dfrac{a}{c} \land \cos\left(x\right) \myequal \dfrac{b}{c}$
+    \item $a \cdot \sin\left(x\right) + b \cos\left(x\right) = c \myland c = \sqrt{a^2 + b^2} \\ \myrightarrow  \sin\left(x\right) \myequal \dfrac{a}{c} \myland \cos\left(x\right) \myequal \dfrac{b}{c}$
 \end{itemize}
 
 \section{Identidades trigonométricas de ángulos compuestos}
