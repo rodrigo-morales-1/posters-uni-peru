@@ -18,36 +18,61 @@
     bottom=1.5cm
 ]{geometry}
 
-%% \usepackage{titlesec}
-%% \titleformat{\section}  % which section command to format
-%%   {\fontsize{8}{10}\bfseries} % format for whole line
-%%   {\thesection} % how to show number
-%%   {1em} % space between number and text
-%%   {} % formatting for just the text
-%%   [] % formatting for after the text
+\usepackage{titlesec}
+\titleformat{\section}  % which section command to format
+  {\fontsize{20}{20}\bfseries} % format for whole line
+  {\thesection} % how to show number
+  {1em} % space between number and text
+  {} % formatting for just the text
+  [] % formatting for after the text
 
-%% \titleformat{\subsection}
-%%   {\fontsize{8}{10}\bfseries} % format for whole line
-%%   {\thesubsection} % how to show number
-%%   {1em} % space between number and text
-%%   {} % formatting for just the text
-%%   [] % formatting for after the text
+\titleformat{\subsection}
+  {\fontsize{18}{18}\bfseries} % format for whole line
+  {\thesubsection} % how to show number
+  {1em} % space between number and text
+  {} % formatting for just the text
+  [] % formatting for after the text
 
 \usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 
-\newcommand{\myequal}{%
-  \mathrel{%
-    \vcenter{\offinterlineskip
-      \hbox{\textcolor{blue}{\rule{0.7em}{1.5pt}}} % Top bar thickness
-      \vskip 1.5pt % Gap between bars
-      \hbox{\textcolor{blue}{\rule{0.7em}{1.5pt}}} % Bottom bar thickness
-    }%
-  }%
+% +-----------------------+
+% |                       |
+% | Símbolos customizados |
+% |                       |
+% +-----------------------+
+
+\newsavebox \myequalbox
+\sbox \myequalbox {%
+    \begin{tikzpicture}[scale=0.2, baseline]
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (1.5,0);
+        \coordinate (C) at (0,0.6);
+        \coordinate (D) at (1.5,0.6);
+        \draw[blue, line width = 1.5pt] (A) -- (B);
+        \draw[blue, line width = 1.5pt] (C) -- (D);
+    \end{tikzpicture}%
 }
 
+\newcommand\myequal{\mathrel{\vcenter{\hbox{\usebox\myequalbox}}}}
+
+\newsavebox\myrightarrowbox
+\sbox\myrightarrowbox{%
+    \begin{tikzpicture}[baseline=-0.7ex] % Adjusts vertical alignment
+        \draw[red, line width = 1pt, -{Computer Modern Rightarrow[length=6pt, width=8pt]}] (0,0) -- (0.5,0);
+    \end{tikzpicture}%
+}
+\newcommand\myrightarrow{\mathrel{\vcenter{\hbox{\usebox\myrightarrowbox}}}}
+
+% +--------------------------------------------------
+% |
+% | Inicio del documento
+% |
+% +--------------------------------------------------
 
 \begin{document}
-\fontsize{12pt}{12pt}\selectfont
+\fontsize{14pt}{14pt}\selectfont
 
 \begin{multicols}{3}
 \section{Identidades trigonométricas de ángulos simples}
@@ -83,10 +108,10 @@ Identidades auxiliares
     \item $\sin^6\left(x\right) + \cos^6\left(x\right) \myequal 1 - 3 \sin^2\left(x\right) \cos^2\left(x\right)$
     \item $\tan\left(x\right) + \cot\left(x\right) \myequal \sec\left(x\right) \csc\left(x\right)$
     \item $\sec^2 \left(x\right) + \csc^2 \left(x\right) \myequal \sec^2\left(x\right) \csc^2 \left(x\right)$
-    \item $\sec\left(x\right) + \tan\left(x\right) \myequal m \rightarrow \sec\left(x\right) - \tan\left(x\right) \myequal \dfrac{1}{m}$
-    \item $\csc\left(x\right) + \cot\left(x\right) \myequal m \rightarrow \csc\left(x\right) - \cot\left(x\right) \myequal \dfrac{1}{m}$
+    \item $\sec\left(x\right) + \tan\left(x\right) \myequal m \myrightarrow \sec\left(x\right) - \tan\left(x\right) \myequal \dfrac{1}{m}$
+    \item $\csc\left(x\right) + \cot\left(x\right) \myequal m \myrightarrow \csc\left(x\right) - \cot\left(x\right) \myequal \dfrac{1}{m}$
     \item $\left( 1 + \pm \sin\left(x\right) \pm \cos\left(x\right) \right)^2 \myequal 2 \left(1 \pm \sin\left(x\right)\right) \left(1 \pm \cos\left(x\right)\right)$
-    \item $a \cdot \sin\left(x\right) + b \cos\left(x\right) = c \land c = \sqrt{a^2 + b^2} \rightarrow \sin\left(x\right) \myequal \dfrac{a}{c} \land \cos\left(x\right) \myequal \dfrac{b}{c}$
+    \item $a \cdot \sin\left(x\right) + b \cos\left(x\right) = c \land c = \sqrt{a^2 + b^2} \\ \myrightarrow  \sin\left(x\right) \myequal \dfrac{a}{c} \land \cos\left(x\right) \myequal \dfrac{b}{c}$
 \end{itemize}
 
 \section{Identidades trigonométricas de ángulos compuestos}
@@ -194,9 +219,9 @@ Identidades de degradación
 Identidades auxiliares
 
 \begin{itemize}
-    \item $\sin\left(3x\right) \myequal \sin\left(x\right) \left(2 \cos\left(2x\right) + 1\right)$
-    \item $\cos\left(3x\right) \myequal \cos\left(x\right) \left(2 \cos\left(2x\right) - 1\right)$
-    \item $\tan\left(3x\right) \myequal \tan\left(x\right) \left( \dfrac{2 \cos\left(2x\right) + 1}{2 \cos\left(2x\right) - 1}\right)$
+    \item $\dfrac{\sin\left(3x\right)}{\sin\left(x\right)} \myequal 2 \cos\left(2x\right) + 1$
+    \item $\dfrac{\cos\left(3x\right)}{\cos\left(x\right)} \myequal 2 \cos\left(2x\right) - 1$
+    \item $\dfrac{\tan\left(3x\right)}{\tan\left(x\right)} \myequal \dfrac{2 \cos\left(2x\right) + 1}{2 \cos\left(2x\right) - 1}$
     \item $\sin\left(3x\right) \myequal 4 \sin\left(x\right) \sin\left(60\degree - x\right) \sin\left(60 \degree + x\right)$
     \item $\cos\left(3x\right) \myequal 4 \cos\left(x\right) \cos\left(60\degree - x\right) \cos\left(60 \degree + x\right)$
     \item $\tan\left(3x\right) \myequal 4 \tan\left(x\right) \tan\left(60\degree - x\right) \tan\left(60 \degree + x\right)$
