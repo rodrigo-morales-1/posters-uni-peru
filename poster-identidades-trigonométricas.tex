@@ -65,6 +65,14 @@
 }
 \newcommand\myrightarrow{\mathrel{\vcenter{\hbox{\usebox\myrightarrowbox}}}}
 
+\newsavebox\myleftrightarrowbox
+\sbox\myleftrightarrowbox{%
+    \begin{tikzpicture}[baseline=-0.7ex] % Adjusts vertical alignment
+        \draw[red, line width = 1pt, {Computer Modern Rightarrow[length=6pt, width=8pt]}-{Computer Modern Rightarrow[length=6pt, width=8pt]}] (0,0) -- (0.6,0);
+    \end{tikzpicture}%
+}
+\newcommand\myleftrightarrow{\mathrel{\vcenter{\hbox{\usebox\myleftrightarrowbox}}}}
+
 \newsavebox\mylandbox
 \sbox\mylandbox{%
     \begin{tikzpicture}
@@ -138,7 +146,7 @@ Identidades auxiliares de la suma y diferencia de dos ángulos
 \begin{itemize}
      \item $\sin\left(x + y\right) \cdot \sin\left(x - y\right) \myequal \sin^2\left(x\right) - \sin^2\left(y\right)$
      \item $\cos\left(x + y\right) \cdot \cos\left(x - y\right) \myequal \cos^2\left(x\right) - \sin^2\left(y\right)$
-     \item $\tan\left(\theta\right) \myequal \dfrac{b}{a} \leftrightarrow a \cdot \sin\left(x\right) \pm b \cdot \cos\left(x\right) \myequal \sqrt{a^2 + b^2} \cdot \sin\left(x \pm \theta\right)$
+     \item $\tan\left(\theta\right) \myequal \dfrac{b}{a} \myleftrightarrow a \cdot \sin\left(x\right) \pm b \cdot \cos\left(x\right) \myequal \sqrt{a^2 + b^2} \cdot \sin\left(x \pm \theta\right)$
      \item $\forall x \in \mathbb{R} : - \sqrt{a^2 + b^2} \leq a \cdot \sin\left(x\right) + b \cdot \cos\left(x\right) \leq \sqrt{a^2 + b^2}$
      \item $\tan\left(x \pm y\right) \myequal \tan\left(x\right) \pm \tan\left(y\right) \pm \tan\left(x\right) \tan\left(y\right) \tan\left(x \pm y\right)$
 \end{itemize}
