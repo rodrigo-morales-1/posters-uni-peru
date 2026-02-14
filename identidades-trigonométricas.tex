@@ -326,17 +326,50 @@ Transformación de producto de senos a diferencia de cosenos.
 Identidades de transformación de cociente de ángulos múltiples del seno.
 
 \begin{itemize}
-  \item $\dfrac{\sin\left(3x\right)}{\sin\left(x\right)} = 2 \cos\left(2x\right) + 1$
-  \item $\dfrac{\sin\left(5x\right)}{\sin\left(x\right)} = 2 \cos\left(4x\right) + 2 \cos\left(2x\right) + 1$
-  \item $\dfrac{\sin\left(7x\right)}{\sin\left(x\right)} = 2 \cos\left(6x\right) + 2 \cos\left(4x\right) + 2 \cos\left(2x\right) + 1$
+  \item $\dfrac{\sin\left(3x\right)}{\sin\left(x\right)} \myequal 2 \cos\left(2x\right) + 1$
+  \item $\dfrac{\sin\left(5x\right)}{\sin\left(x\right)} \myequal 2 \cos\left(4x\right) + 2 \cos\left(2x\right) + 1$
+  \item $\dfrac{\sin\left(7x\right)}{\sin\left(x\right)} \myequal 2 \cos\left(6x\right) + 2 \cos\left(4x\right) + 2 \cos\left(2x\right) + 1$
 \end{itemize}
 
 Identidades de transformación de cociente de ángulos múltiples del coseno.
 
 \begin{itemize}
-  \item $\dfrac{\cos\left(3x\right)}{\cos\left(x\right)} = 2 \cos\left(2x\right) - 1$
-  \item $\dfrac{\cos\left(5x\right)}{\cos\left(x\right)} = 2 \cos\left(4x\right) - 2 \cos\left(2x\right) + 1$
-  \item $\dfrac{\cos\left(7x\right)}{\cos\left(x\right)} = 2 \cos\left(6x\right) - 2 \cos\left(4x\right) + 2 \cos\left(2x\right) - 1$
+  \item $\dfrac{\cos\left(3x\right)}{\cos\left(x\right)} \myequal 2 \cos\left(2x\right) - 1$
+  \item $\dfrac{\cos\left(5x\right)}{\cos\left(x\right)} \myequal 2 \cos\left(4x\right) - 2 \cos\left(2x\right) + 1$
+  \item $\dfrac{\cos\left(7x\right)}{\cos\left(x\right)} \myequal 2 \cos\left(6x\right) - 2 \cos\left(4x\right) + 2 \cos\left(2x\right) - 1$
+\end{itemize}
+
+\section{Series, sumatorias y productorias trigonométricas}
+
+\subsection{Suma de senos o cosenos de argumentos que están en progresión aritmética}
+
+\begin{itemize}
+  \item $\displaystyle \sum_{k=1}^{n} \sin\left(x + kr\right) \myequal \dfrac{\sin\left(\dfrac{nr}{2}\right)}{\sin\left(\dfrac{r}{2}\right)} \cdot \sin\left(\dfrac{P+U}{2}\right)$
+  \item $\displaystyle \sum_{k=1}^{n} \cos\left(x + kr\right) \myequal \dfrac{\sin\left(\dfrac{nr}{2}\right)}{\sin\left(\dfrac{r}{2}\right)} \cdot \cos\left(\dfrac{P+U}{2}\right)$
+\end{itemize}
+
+donde:
+
+\begin{itemize}
+  \item $n$: número de términos
+  \item $r$: razón de la progresión aritmética
+  \item $P$: primer argumento de la sumatoria
+  \item $U$: último argumento de la sumatoria
+\end{itemize}
+
+Teoremas adicionales
+
+\begin{itemize}
+  \item $\displaystyle \sum_{k=1}^{n} \cos\left(\left(\dfrac{2k}{2n+1}\right)\pi\right) \myequal - \dfrac{1}{2}$
+  \item $\displaystyle \sum_{k=1}^{n} \cos\left(\left(\dfrac{2k-1}{2n+1}\right)\pi\right) \myequal \dfrac{1}{2}$
+\end{itemize}
+
+\subsection{Productos de R.T. de arcos de la forma $\left(\dfrac{k \pi}{2n+1}\right), n, k \in \mathbb{N}$}
+
+\begin{itemize}
+  \item $\displaystyle \prod_{k=1}^{n} \sin \left(\dfrac{k \pi}{2n + 1}\right) \myequal \dfrac{\sqrt{2n+1}}{2^n}$
+  \item $\displaystyle \prod_{k=1}^{n} \cos \left(\dfrac{k \pi}{2n + 1}\right) \myequal \dfrac{1}{2^n}$
+  \item $\displaystyle \prod_{k=1}^{n} \tan \left(\dfrac{k \pi}{2n + 1}\right) \myequal \sqrt{2n+1}$
 \end{itemize}
 
 \end{multicols}
