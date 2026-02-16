@@ -12,7 +12,7 @@
 % The package geometry allows to reduce the margin
 \usepackage[
     a2paper,
-    top=0.5cm,
+    top=1.5cm,
     left=0.5cm,
     right=0.5cm,
     bottom=1.5cm
@@ -36,6 +36,26 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
+
+% +----------------------------+
+% |                            |
+% | Encabezado y pie de página |
+% |                            |
+% +----------------------------+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{%
+    \fontsize{30pt}{30pt}\selectfont
+    \bfseries{Identidades trigonométricas}
+}
+\fancyfoot[L]{%
+    \fontsize{30pt}{30pt}\selectfont
+    Obtén el código fuente, contribuye y descarga otros posters en: 
+}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
 
 % +-----------------------+
 % |                       |
@@ -89,6 +109,8 @@
 % +--------------------------------------------------
 
 \begin{document}
+
+
 \fontsize{14pt}{14pt}\selectfont
 
 \begin{multicols}{3}
