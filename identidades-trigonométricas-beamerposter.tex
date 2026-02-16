@@ -111,20 +111,31 @@
 \setbeamercolor{lower separation line head}{bg=black}
 \setbeamercolor{upper separation line foot}{bg=black}
 
-\AtBeginSection[]{%
+\renewcommand{\section}[1]{%
+    \stepcounter{section}%
+    \setcounter{subsection}{0}%
     {%
-        \fontsize{20pt}{20pt}\selectfont
-        \textbf{\thesection~\insertsection}
-        \vspace{6pt}
+        \fontsize{20pt}{24pt}\selectfont\bfseries
+        % Calculate the width of the number + space
+        \settowidth{\hangindent}{\thesection\quad}%
+        \hangafter=1 % Apply hang after the first line
+        \thesection\quad #1\par
     }
+    \par\vspace{2.3ex plus .2ex}
+    \noindent\ignorespaces
 }
 
-\AtBeginSubsection[]{%
+\renewcommand{\subsection}[1]{%
+   \stepcounter{subsection}
     {%
-        \fontsize{18pt}{18pt}\selectfont
-        \textbf{\thesection.\thesubsection~\insertsubsection}
-        \vspace{4pt}
+        \fontsize{18pt}{22pt}\selectfont\bfseries
+        % Calculate the width of the number + space
+        \settowidth{\hangindent}{\thesection.\thesubsection\quad}%
+        \hangafter=1 % Apply hang after the first line
+        \thesection.\thesubsection\quad #1\par
     }
+    \par\vspace{1.5ex plus .2ex}%
+    \noindent\ignorespaces
 }
 
 
