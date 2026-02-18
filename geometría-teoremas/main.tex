@@ -12,6 +12,21 @@
 ]{geometry}
 \usepackage{wrapfig}
 \usepackage{parskip}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+\newtcbox{\myformula}{
+    colback=blue!10,  % Sets the background color
+    colframe=blue!50, % Sets the border frame color
+    boxrule=0.5pt,    % Defines the thickness of the outer border frame
+    arc=2pt,          % Sets the radius for the rounded corners
+    boxsep=2pt,       % Sets internal padding between the frame and the "left/right/top/bottom" area
+    left=1pt,         % Extra horizontal space on the left of the content
+    right=1pt,        % Extra horizontal space on the right of the content
+    top=1pt,          % Extra vertical space above the content
+    bottom=1pt        % Extra vertical space below the content
+}
+
 
 \begin{document}
 \begin{multicols*}{3}
@@ -21,6 +36,8 @@
 
     \begin{minipage}{0.5\linewidth}
         El área de una región cuadrangular determinado por un cuadrilátero inscrito a una circunferencia y circunscrito a otra circunferencia es igual a la raíz cuadrada del producto de las longitudes de los lados.
+
+        \myformula{$\left[ABCD\right] = \sqrt{abcd}$}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-bicéntrico/main.pdf}
@@ -30,6 +47,11 @@
 
     \begin{minipage}{0.5\linewidth}
         El área de una región cuadrangular determinado por un cuadrilátero circunscrito a una circunferencia es igual al producto del semiperímetro del cuadrilátero y el radio de la circunferencia inscrita.
+
+        Semiperímetro: $p = \dfrac{a+b+c+d}{2}$
+
+        \myformula{$\left[ABCD\right] = p \cdot r$}
+
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-circunscrito/main.pdf}

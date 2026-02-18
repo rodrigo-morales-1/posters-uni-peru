@@ -68,7 +68,16 @@
         % Here, p2 is the orthogonal projection of the center onto the segment AB. In other words, \bar{p1p2} is a radius.
         % n1 is the length of the radius
         let \p1=(centerOfIncircle), \p2=($(A)!(centerOfIncircle)!(B)$), \n1={veclen(\y2-\y1,\x2-\x1)}
-        in (centerOfIncircle) circle [radius=\n1];
+        in (centerOfIncircle) circle [radius=\n1] \pgfextra{\xdef\radiusOfIncircle{\n1}};
+
+    % Dibujar radio de la circunferencia
+    \def\angle{135}
+    \def\offset{0.3}
+    \draw[fill=black] (centerOfIncircle) circle (1pt);
+    % Punto arbitrario
+    \coordinate(P) at ($(centerOfIncircle) + (\angle:\radiusOfIncircle)$);
+    \draw (centerOfIncircle) -- (P)  node [midway, above right] {$r$};
+
 \else
     % Display the warning message
     \node[red, font=\bfseries] at (0,0) {This quadrilateral doesn't have an incircle. $\sumOne \approx \sumTwo$};
