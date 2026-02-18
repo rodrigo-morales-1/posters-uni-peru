@@ -7,7 +7,7 @@
 \begin{document}
 \begin{tikzpicture}
 
-\def\R{3}
+\def\R{2}
 
 % Un cuadrado es un cuadrilátero bicéntrico.
 \def\angleA{45}
@@ -67,7 +67,7 @@
 
         %% Draw quadrilateral and labels
 
-        \draw[fill=blue!10!white, thick]
+        \draw[fill=blue!10!white]
                  (A) node[above]{A}
               -- node [above]{a} (B) node[above]{B}
               -- node [right]{b} (C) node[right]{C}
@@ -90,7 +90,7 @@
             let \p1=(B), \p2=(D), \n1={veclen(\y2-\y1,\x2-\x1)}
             in (B) -- ($(B)!\n1!(M2)$);
 
-        \draw [blue, line width = 1pt, name intersections={of=angleBisector1 and angleBisector2, by={centerOfIncircle}}]
+        \draw [name intersections={of=angleBisector1 and angleBisector2, by={centerOfIncircle}}]
             let \p1=(centerOfIncircle), \p2=($(A)!(centerOfIncircle)!(B)$), \n1={veclen(\y2-\y1,\x2-\x1)}
             in (centerOfIncircle) circle [red, radius=\n1]
             \pgfextra{\xdef\radiusOfIncircle{\n1}};
@@ -103,7 +103,7 @@
         \coordinate (M2) at ($(B)!0.5!(C)$);
         \path[name path=bisectorBC, overlay] ($(M2)!10!90:(C)$) -- ($(M2)!10!-90:(C)$);
 
-        \draw [red, line width = 1pt, name intersections={of=bisectorAB and bisectorBC, by={centerOfCircumcircle}}]
+        \draw [name intersections={of=bisectorAB and bisectorBC, by={centerOfCircumcircle}}]
             let \p1=(centerOfCircumcircle), \p2=(A), \n1={veclen(\y2-\y1,\x2-\x1)}
             in (centerOfCircumcircle) circle [radius=\n1]
            \pgfextra{\xdef\radiusOfCircumcircle{\n1}};
