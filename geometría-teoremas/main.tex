@@ -10,23 +10,27 @@
     right=0.5cm,
     bottom=0.5cm
 ]{geometry}
-\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{parskip}
 
 \begin{document}
-\begin{multicols}{3}
+\begin{multicols*}{3}
     \section{Área de regiones cuadrángulares}
 
-    \subsection{Área de un cuadrilátero bicéntrico}
-
+    \subsection{Área de cuadrilátero bicéntrico}
+    \begin{wrapfigure}{r}{5cm}
+        \vspace{-20pt}
+        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-bicéntrico/main.pdf}
+    \end{wrapfigure}
     El área de una región cuadrangular determinado por un cuadrilátero inscrito a una circunferencia y circunscrito a otra circunferencia es igual a la raíz cuadrada del producto de las longitudes de los lados.
 
-    \includegraphics{figuras/área-de-cuadrilátero-bicéntrico/main.pdf}
+    \vspace{3cm}
 
-    \subsection{Área de un cuadrilátero inscrito}
-
+    \subsection{Área de cuadrilátero circunscrito}
+    \begin{wrapfigure}{r}{5cm}
+        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-circunscrito/main.pdf}
+    \end{wrapfigure}
     El área de una región cuadrangular determinado por un cuadrilátero circunscrito a una circunferencia es igual al producto del semiperímetro del cuadrilátero y el radio de la circunferencia inscrita.
 
-    \includegraphics{figuras/área-de-cuadrilátero-circunscrito/main.pdf}
-
-\end{multicols}
+\end{multicols*}
 \end{document}
