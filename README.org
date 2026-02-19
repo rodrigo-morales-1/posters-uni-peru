@@ -13,3 +13,22 @@ El objetivo de estos posters es ayudar a los estudiantes del CEPREUNI y la Unive
    + Hacer esto es similar a crear una publicación en un foro de Internet
 2. Proponer un cambio en el código haciendo un *pull request*
    + Para hacer esto, necesitas tener conocimientos del comando =git= y como hacer un *pull request* en Github. Además, necesitas saber el lenguaje de marcado LaTeX. LaTeX es el lenguaje que ha sido usado para crear
+
+* ¿Qué es LaTeX?
+:PROPERTIES:
+:CREATED: [2026-02-19 12:17:06 -0500]
+:END:
+
+LaTeX es un [[https://www.wikidata.org/wiki/Special:GoToLinkedPage/eswiki/Q37045][lenguaje de marcado]] que se suele utilizar para escribir documentos que tienen fórmulas de matemática, química o física.
+
+El bloque de abajo muestra un archivo de texto con la extensión =*.tex=. Nostros al pasarle ese archivo a LaTeX, generaremos un archivo PDF que muestra el texto =¡Hola mundo!=.
+
+#+BEGIN_SRC tex-doc
+\documentclass{article}
+
+\begin{document}
+¡Hola mundo!
+\end{document}
+#+END_SRC
+
+Si aprendes a editar LaTeX, podrás modificar los posters de este repositorio a tu gusto (ejm, cambiar colores, eliminar secciones, etc.)
