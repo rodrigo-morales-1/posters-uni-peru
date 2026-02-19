@@ -1,11 +1,12 @@
 \documentclass[tikz]{standalone}
 
+\input{../../colores.tex}
 \usetikzlibrary{calc}
 
 \begin{document}
 \begin{tikzpicture}
 
-    \def\circumradius{2}
+    \def\circumradius{1.5}
     \def\angleA{130}
     \def\angleB{30}
     \def\angleC{290}
@@ -28,10 +29,10 @@
 
     % Nombrar vértices
     \def\offset{0.3}
-    \draw[fill=black] ($(center) + (\angleA:\circumradius + \offset)$) node {$A$};
-    \draw[fill=black] ($(center) + (\angleB:\circumradius + \offset)$) node {$B$};
-    \draw[fill=black] ($(center) + (\angleC:\circumradius + \offset)$) node {$C$};
-    \draw[fill=black] ($(center) + (\angleD:\circumradius + \offset)$) node {$D$};
+    \draw ($(center) + (\angleA:\circumradius + \offset)$) node {$A$};
+    \draw ($(center) + (\angleB:\circumradius + \offset)$) node {$B$};
+    \draw ($(center) + (\angleC:\circumradius + \offset)$) node {$C$};
+    \draw ($(center) + (\angleD:\circumradius + \offset)$) node {$D$};
 
 \end{tikzpicture}
 \end{document}

@@ -29,61 +29,117 @@
     bottom=1pt                 % Extra vertical space below the content
 }
 
+\newcommand\myPolygonArea[1]{\left[#1\right]}
+
 \begin{document}
 \begin{multicols*}{3}
     \section{Área de regiones cuadrángulares}
 
-    \subsection{Área de cuadrilátero bicéntrico}
-
     \begin{minipage}{0.5\linewidth}
-        El área de una región cuadrangular determinado por un cuadrilátero inscrito a una circunferencia y circunscrito a otra circunferencia es igual a la raíz cuadrada del producto de las longitudes de los lados.
-
-        \myformula{$\left[ABCD\right] = \sqrt{abcd}$}
-    \end{minipage}
-    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            Área de cuadrilátero bicéntrico
+        \end{center}
         \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-bicéntrico/main.pdf}
-    \end{minipage}
-
-    \subsection{Área de cuadrilátero circunscrito}
-
-    \begin{minipage}{0.5\linewidth}
-        El área de una región cuadrangular determinado por un cuadrilátero circunscrito a una circunferencia es igual al producto del semiperímetro del cuadrilátero y el radio de la circunferencia inscrita.
-
-        Semiperímetro: $p = \dfrac{a+b+c+d}{2}$
-
-        \myformula{$\left[ABCD\right] = p \cdot r$}
-
+        \begin{center}
+            \myformula{$\left[ABCD\right] = \sqrt{abcd}$}
+        \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            Área de cuadrilátero circunscrito
+        \end{center}
         \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-circunscrito/main.pdf}
+        \begin{center}
+            \myformula{$\left[ABCD\right] = p \cdot r$}
+        \end{center}
+        Semiperímetro: $p = \dfrac{a+b+c+d}{2}$
     \end{minipage}
 
-    \subsection{Área de cuadrilátero inscrito}
+    \rule{\linewidth}{0.4pt}
 
-    \begin{minipage}{0.6\linewidth}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            Área de cuadrilátero inscrito
+        \end{center}
+        \vspace{10pt}
+        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-inscrito/main.pdf}
         \myformula{$\left[ABCD\right] = \sqrt{\left(p - a\right) \left(p - b\right) \left(p - c\right) \left(p - d\right)}$}
     \end{minipage}
-    \begin{minipage}{0.4\linewidth}
-        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-inscrito/main.pdf}
-    \end{minipage}
-
-    \subsection{Área usando producto de diagonales y ángulo entre diagonales}
-
-    \begin{minipage}{0.6\linewidth}
-        \myformula{$\left[ABCD\right] = \dfrac{AC \cdot BD}{2} \sin\left(\alpha\right)$}
-    \end{minipage}
-    \begin{minipage}{0.4\linewidth}
+    \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-usando-diagonales/main.pdf}
+        \begin{center}
+            \myformula{$\left[ABCD\right] = \dfrac{AC \cdot BD}{2} \sin\left(\alpha\right)$}
+        \end{center}
     \end{minipage}
 
-    \textbf{Teoremas}
+    \section{Relación de áreas en regiones cuadrangulares}
 
-    \begin{minipage}{0.6\linewidth}
-        \myformula{$S_1 + S_3 = S_2 + S_4$}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-producto-de-2-áreas/main.pdf}
+        \begin{center}
+            \myformula{$S_1 + S_3 = S_2 + S_4$}
+        \end{center}
     \end{minipage}
-    \begin{minipage}{0.4\linewidth}
-        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-usando-medianas/main.pdf}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-área-determinada-por-segmentos-puntos-medios/main.pdf}
+        \begin{center}
+            \myformula{$\myPolygonArea{MNPQ} = \dfrac{1}{2} \myPolygonArea{ABCD}$}
+        \end{center}
+    \end{minipage}
+
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-producto-de-2-áreas/main.pdf}
+        \begin{center}
+            \myformula{$S_1 \cdot S_3 = S_2 \cdot S_4$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-puntos-medios-y-ángulo-entre-diagonales/main.pdf}
+        \begin{center}
+            \myformula{$\myPolygonArea{ABCD} = MP \cdot NQ \cdot \sin\left(\alpha\right)$}
+        \end{center}
+    \end{minipage}
+
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-vertices-a-2-puntos-medios/main.pdf}
+        \begin{center}
+            \myformula{$\myPolygonArea{AMCN} = \dfrac{\myPolygonArea{ABCD}}{2}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-vertices-a-4-puntos-medios/main.pdf}
+        \begin{center}
+            \myformula{$S_1 + S_3 = S_2 + S_4$}
+        \end{center}
+    \end{minipage}
+
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-área-de-cuadrilátero-interior-determinado-por-medianas/main.pdf}
+        \begin{center}
+            \myformula{$S = S_1 + S_2 + S_3 + S_4$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-suma-de-áreas-determinadas-por-segmentos-puntos-medios/main.pdf}
+        \begin{center}
+            \myformula{$S_1 + S_3 = S_2 + S_4$}
+        \end{center}
     \end{minipage}
 
 \end{multicols*}
 \end{document}
+
+
+%% Template
+%% \begin{minipage}{0.5\linewidth}
+%%     \includegraphics[width=\linewidth]{example-image-a}
+%%     \begin{center}
+%%         \myformula{$1 = 1$}
+%%     \end{center}
+%% \end{minipage}
+%% \begin{minipage}{0.5\linewidth}
+%%     \includegraphics[width=\linewidth]{example-image-a}
+%%     \begin{center}
+%%         \myformula{$1 = 1$}
+%%     \end{center}
+%% \end{minipage}
