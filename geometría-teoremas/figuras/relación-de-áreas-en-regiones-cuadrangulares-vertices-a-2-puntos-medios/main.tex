@@ -26,14 +26,6 @@
 \coordinate (C) at (4, 4);
 \coordinate (D) at (5, 0);
 
-% Dibujar cuadrilátero
-\draw
-    (A) node[below left]{$A$}
-    -- (B) node[above left]{$B$}
-    -- (C) node[above right]{$C$}
-    -- (D) node[below right]{$D$}
-    -- cycle;
-
 % Hallar puntos medios de cada lado del cuadrilátero.
 \coordinate (M) at ($(B)!0.5!(C)$);
 \coordinate (N) at ($(D)!0.5!(A)$);
@@ -48,14 +40,26 @@
 \draw[draw=none, fill=FilledSurfaceGroupOne] (A) -- (B) -- (C) -- (D) -- cycle;
 \draw[draw=none, fill=FilledSurfaceGroupTwo] (A) -- (M) -- (C) -- (N) -- cycle;
 
+% Dibujamos los segmentos, luego de colorear las superficies para
+% evitar que las superficies cubran a los segmentos.
+
+% Dibujar cuadrilátero
+\draw
+    (A) node[below left]{$A$}
+    -- (B) node[above left]{$B$}
+    -- (C) node[above right]{$C$}
+    -- (D) node[below right]{$D$}
+    -- cycle;
+
+\draw (A) -- (M);
+\draw (C) -- (N);
+
 % Añadir marcadores a los segmentos determinados por las medianas.
 \path[mark rect] (B) -- (M);
 \path[mark rect] (C) -- (M);
 \path[mark two circles] (A) -- (N);
 \path[mark two circles] (D) -- (N);
 
-\draw[dashed] (A) -- (M);
-\draw[dashed] (C) -- (N);
 
 \end{tikzpicture}
 \end{document}

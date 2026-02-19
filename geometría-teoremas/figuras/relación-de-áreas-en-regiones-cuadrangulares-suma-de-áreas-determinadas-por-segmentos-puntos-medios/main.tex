@@ -40,31 +40,15 @@
 \coordinate (C) at (4, 4);
 \coordinate (D) at (5, 0);
 
-% Dibujar cuadrilátero
-\draw
-    (A) node[below left]{$A$}
-    -- (B) node[above left]{$B$}
-    -- (C) node[above right]{$C$}
-    -- (D) node[below right]{$D$}
-    -- cycle;
-
 % Hallar puntos medios de cada lado del cuadrilátero.
 \coordinate (M) at ($(A)!0.5!(B)$);
 \coordinate (N) at ($(B)!0.5!(C)$);
 \coordinate (P) at ($(C)!0.5!(D)$);
 \coordinate (Q) at ($(D)!0.5!(A)$);
 
-% Dibujar medianas y nombrar los puntos medios de cada lado.
-\path
-   (M) node [left] {$M$}
--- (N) node [above] {$N$}
--- (P) node [right] {$P$}
--- (Q) node [below] {$Q$}
--- cycle;
-
-% Dibujar segmentos de vértices a puntos medios.
-\draw[dashed, name path = MP] (M) -- (P);
-\draw[dashed, name path = NQ] (N) -- (Q);
+% Dibujar segmentos que unen los puntos medios de los lados opuestos.
+\path[name path = MP] (M) -- (P);
+\path[name path = NQ] (N) -- (Q);
 
 % Colorear superficies.
 \path [name intersections={of=MP and NQ, by=I}];
@@ -72,6 +56,15 @@
 \fill[FilledSurfaceGroupTwo] (N) -- (C) -- (P) -- (I) -- cycle;
 \fill[FilledSurfaceGroupOne] (P) -- (D) -- (Q) -- (I) -- cycle;
 \fill[FilledSurfaceGroupTwo] (Q) -- (A) -- (M) -- (I) -- cycle;
+
+% Dibujamos los segmentos, luego de colorear las superficies para
+% evitar que las superficies cubran a los segmentos.
+
+% Dibujar cuadrilátero
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+% Dibujar segmentos que unen los puntos medios de los lados opuestos.
+\draw (M) -- (P);
+\draw (N) -- (Q);
 
 %% Añadir marcadores a los segmentos determinados por las medianas.
 \draw[mark rect] (A) -- (M);

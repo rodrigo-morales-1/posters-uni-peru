@@ -1,8 +1,9 @@
 \documentclass[tikz,border=5pt]{standalone}
 
+\input{../../colores.tex}
+
 \usetikzlibrary{calc, intersections}
 \usepackage{xfp}
-\usepackage{mathrsfs} % Añade el macro \mathscr que usamos para nombrar circunferencias: \mathscr{C_1}
 
 \begin{document}
 \begin{tikzpicture}
@@ -67,7 +68,7 @@
 
         %% Draw quadrilateral and labels
 
-        \draw[fill=blue!10!white]
+        \draw[fill=FilledSurfaceGroupOne]
                  (A) node[above]{$A$}
               -- node [above]{a} (B) node[above]{$B$}
               -- node [right]{b} (C) node[right]{$C$}
@@ -107,13 +108,6 @@
             let \p1=(centerOfCircumcircle), \p2=(A), \n1={veclen(\y2-\y1,\x2-\x1)}
             in (centerOfCircumcircle) circle [radius=\n1]
            \pgfextra{\xdef\radiusOfCircumcircle{\n1}};
-
-        % Show labels for incircle and circumcircle
-        \def\offset{10}
-        \def\incircleAngleLabel{270}
-        \draw node at ($(centerOfIncircle) + (\incircleAngleLabel:\radiusOfIncircle + \offset)$) {$\mathscr{C}_1$};
-        \def\circumcircleAngleLabel{310}
-        \draw node at ($(centerOfCircumcircle) + (\circumcircleAngleLabel:\radiusOfCircumcircle + \offset)$) {$\mathscr{C}_2$};
     \else
         \node[red, font=\bfseries] at (0,0) {This quadrilateral is tangential, but is not cyclic. \isCyclicNumber};
     \fi

@@ -1,0 +1,26 @@
+\documentclass[tikz]{standalone}
+
+\input{../../colores.tex}
+
+\usetikzlibrary{calc, angles}
+
+\begin{document}
+\begin{tikzpicture}
+
+\coordinate (A) at (0, 0);
+\coordinate (B) at (1, 3);
+\coordinate (C) at (6, 3);
+\coordinate (D) at (5, 0);
+\draw[fill = FilledSurfaceGroupOne]
+    (A) node[below left]{$A$}
+    -- node[left=2pt] {$a$} (B) node[above left]{$B$}
+    -- (C) node[above]{$C$}
+    -- (D) node[below]{$D$}
+    -- node[below=2pt] {$b$} cycle;
+
+\path pic [draw, angle radius = 8pt, angle eccentricity = 2pt, pic text={$\alpha$}] {angle = D--A--B};
+
+\end{tikzpicture}
+\end{document}
+
+

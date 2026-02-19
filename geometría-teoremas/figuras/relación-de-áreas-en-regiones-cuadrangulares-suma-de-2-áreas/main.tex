@@ -41,48 +41,39 @@
 \coordinate (D) at (5, 0);
 
 % Dibujar cuadrilátero
-\draw
-    (A) node[below left]{$A$}
-    -- (B) node[above left]{$B$}
-    -- (C) node[above right]{$C$}
-    -- (D) node[below right]{$D$}
-    -- cycle;
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
 
 % Hallar puntos medios de cada lado del cuadrilátero.
-\coordinate (MidpointAB) at ($(A)!0.5!(B)$);
-\coordinate (MidpointBC) at ($(B)!0.5!(C)$);
-\coordinate (MidpointCD) at ($(C)!0.5!(D)$);
-\coordinate (MidpointAD) at ($(D)!0.5!(A)$);
-
-% Dibujar medianas y nombrar los puntos medios de cada lado.
-\draw[dashed, line width = 1pt]
-   (MidpointAB) node [left] {$M$}
--- (MidpointBC) node [above] {$N$}
--- (MidpointCD) node [right] {$P$}
--- (MidpointAD) node [below] {$Q$}
--- cycle;
+\coordinate (M) at ($(A)!0.5!(B)$);
+\coordinate (N) at ($(B)!0.5!(C)$);
+\coordinate (P) at ($(C)!0.5!(D)$);
+\coordinate (Q) at ($(D)!0.5!(A)$);
 
 % Colorear superficies.
-\fill[color=FilledSurfaceGroupOne] (MidpointAB) -- (MidpointBC) -- (B) -- cycle;
-\fill[color=FilledSurfaceGroupOne] (MidpointCD) -- (MidpointAD) -- (D) -- cycle;
-\fill[color=FilledSurfaceGroupTwo] (MidpointBC) -- (MidpointCD) -- (C) -- cycle;
-\fill[color=FilledSurfaceGroupTwo] (MidpointAD) -- (MidpointAB) -- (A) -- cycle;
+\fill[color=FilledSurfaceGroupOne] (Q) -- (M) -- (A) -- cycle;
+\fill[color=FilledSurfaceGroupTwo] (M) -- (N) -- (B) -- cycle;
+\fill[color=FilledSurfaceGroupTwo] (P) -- (Q) -- (D) -- cycle;
+\fill[color=FilledSurfaceGroupOne] (N) -- (P) -- (C) -- cycle;
 
 % Añadir marcadores a los segmentos determinados por las medianas.
-\draw[mark rect] (A) -- (MidpointAB);
-\draw[mark rect] (B) -- (MidpointAB);
-\draw[mark rhombus] (B) -- (MidpointBC);
-\draw[mark rhombus] (C) -- (MidpointBC);
-\draw[mark one circle] (C) -- (MidpointCD);
-\draw[mark one circle] (D) -- (MidpointCD);
-\draw[mark two circles] (D) -- (MidpointAD);
-\draw[mark two circles] (A) -- (MidpointAD);
+\draw[mark rect] (A) -- (M);
+\draw[mark rect] (B) -- (M);
+\draw[mark rhombus] (B) -- (N);
+\draw[mark rhombus] (C) -- (N);
+\draw[mark one circle] (C) -- (P);
+\draw[mark one circle] (D) -- (P);
+\draw[mark two circles] (D) -- (Q);
+\draw[mark two circles] (A) -- (Q);
 
 % Nombrar la superficie de cada triángulo.
-\node at (barycentric cs:MidpointAD=1,MidpointAB=1,A=1) {$S_1$};
-\node at (barycentric cs:MidpointAB=1,MidpointBC=1,B=1) {$S_2$};
-\node at (barycentric cs:MidpointBC=1,MidpointCD=1,C=1) {$S_3$};
-\node at (barycentric cs:MidpointCD=1,MidpointAD=1,D=1) {$S_4$};
+\node at (barycentric cs:Q=1,M=1,A=1) {$S_1$};
+\node at (barycentric cs:M=1,N=1,B=1) {$S_2$};
+\node at (barycentric cs:N=1,P=1,C=1) {$S_3$};
+\node at (barycentric cs:P=1,Q=1,D=1) {$S_4$};
+
+% Dibujamos los segmentos, luego de colorear las superficies para
+% evitar que las superficies cubran a los segmentos.
+\draw (M) -- (N) -- (P) -- (Q) -- cycle;
 
 \end{tikzpicture}
 \end{document}

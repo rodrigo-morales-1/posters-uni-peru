@@ -17,7 +17,7 @@
 \usepackage{tcolorbox}
 \usepackage{amsmath}
 
-\newtcbox{\myformula}{
+\newtcbox{\myFormula}{
     colback=FormulaBackground, % Sets the background color
     colframe=FormulaFrame,     % Sets the border frame color
     boxrule=1pt,             % Defines the thickness of the outer border frame
@@ -37,92 +37,221 @@
 
     \begin{minipage}{0.5\linewidth}
         \begin{center}
-            Área de cuadrilátero bicéntrico
-        \end{center}
-        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-bicéntrico/main.pdf}
-        \begin{center}
-            \myformula{$\left[ABCD\right] = \sqrt{abcd}$}
+            Área de cuadrilátero inscrito
+        \includegraphics[width=\linewidth]{figuras/área-de-región-cuadrangular-inscrita/main.pdf}
+        \myFormula{$\left[ABCD\right] = \sqrt{\left(p - a\right) \left(p - b\right) \left(p - c\right) \left(p - d\right)}$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \begin{center}
             Área de cuadrilátero circunscrito
+        \includegraphics[width=\linewidth]{figuras/área-de-región-cuadrangular-circunscrita/main.pdf}
+            \myFormula{$\left[ABCD\right] = p \cdot r$}
+            $p$: semiperímetro
+
+            $p = \dfrac{a+b+c+d}{2}$
         \end{center}
-        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-circunscrito/main.pdf}
-        \begin{center}
-            \myformula{$\left[ABCD\right] = p \cdot r$}
-        \end{center}
-        Semiperímetro: $p = \dfrac{a+b+c+d}{2}$
     \end{minipage}
 
     \rule{\linewidth}{0.4pt}
 
     \begin{minipage}{0.5\linewidth}
         \begin{center}
-            Área de cuadrilátero inscrito
-        \end{center}
-        \vspace{10pt}
-        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-inscrito/main.pdf}
-        \myformula{$\left[ABCD\right] = \sqrt{\left(p - a\right) \left(p - b\right) \left(p - c\right) \left(p - d\right)}$}
-    \end{minipage}
-    \begin{minipage}{0.5\linewidth}
-        \includegraphics[width=\linewidth]{figuras/área-de-cuadrilátero-usando-diagonales/main.pdf}
-        \begin{center}
-            \myformula{$\left[ABCD\right] = \dfrac{AC \cdot BD}{2} \sin\left(\alpha\right)$}
+            Área de cuadrilátero bicéntrico
+            \includegraphics[width=\linewidth]{figuras/área-de-región-cuadrangular-bicéntrica/main.pdf}
+            \myFormula{$\left[ABCD\right] = \sqrt{abcd}$}
         \end{center}
     \end{minipage}
 
-    \section{Relación de áreas en regiones cuadrangulares}
+    \rule{\linewidth}{0.4pt}
 
     \begin{minipage}{0.5\linewidth}
-        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-producto-de-2-áreas/main.pdf}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-cuadrangular-usando-diagonales/main.pdf}
         \begin{center}
-            \myformula{$S_1 + S_3 = S_2 + S_4$}
+            \myFormula{$\left[ABCD\right] = \dfrac{AC \cdot BD}{2} \sin\left(\alpha\right)$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-cuadrangular-de-diagonales-perpendiculares/main.pdf}
+        \begin{center}
+            \myFormula{$\myPolygonArea{ABCD} = \dfrac{AC \cdot BD}{2}$}
+        \end{center}
+    \end{minipage}
+
+    \subsection{Relación de áreas en regiones cuadrangulares}
+
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-suma-de-2-áreas/main.pdf}
+        \begin{center}
+            \myFormula{$S_1 + S_3 = S_2 + S_4$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-área-determinada-por-segmentos-puntos-medios/main.pdf}
         \begin{center}
-            \myformula{$\myPolygonArea{MNPQ} = \dfrac{1}{2} \myPolygonArea{ABCD}$}
+            \myFormula{$\myPolygonArea{MNPQ} = \dfrac{1}{2} \myPolygonArea{ABCD}$}
         \end{center}
     \end{minipage}
 
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-producto-de-2-áreas/main.pdf}
         \begin{center}
-            \myformula{$S_1 \cdot S_3 = S_2 \cdot S_4$}
+            \myFormula{$S_1 \cdot S_3 = S_2 \cdot S_4$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-puntos-medios-y-ángulo-entre-diagonales/main.pdf}
         \begin{center}
-            \myformula{$\myPolygonArea{ABCD} = MP \cdot NQ \cdot \sin\left(\alpha\right)$}
+            \myFormula{$\myPolygonArea{ABCD} = MP \cdot NQ \cdot \sin\left(\alpha\right)$}
         \end{center}
     \end{minipage}
 
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-vertices-a-2-puntos-medios/main.pdf}
         \begin{center}
-            \myformula{$\myPolygonArea{AMCN} = \dfrac{\myPolygonArea{ABCD}}{2}$}
+            \myFormula{$\myPolygonArea{AMCN} = \dfrac{\myPolygonArea{ABCD}}{2}$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-vertices-a-4-puntos-medios/main.pdf}
         \begin{center}
-            \myformula{$S_1 + S_3 = S_2 + S_4$}
+            \myFormula{$S_1 + S_3 = S_2 + S_4$}
         \end{center}
     \end{minipage}
 
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-área-de-cuadrilátero-interior-determinado-por-medianas/main.pdf}
         \begin{center}
-            \myformula{$S = S_1 + S_2 + S_3 + S_4$}
+            \myFormula{$S = S_1 + S_2 + S_3 + S_4$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-cuadrangulares-suma-de-áreas-determinadas-por-segmentos-puntos-medios/main.pdf}
         \begin{center}
-            \myformula{$S_1 + S_3 = S_2 + S_4$}
+            \myFormula{$S_1 + S_3 = S_2 + S_4$}
+        \end{center}
+    \end{minipage}
+
+    \section{Área de regiones trapeciales}
+
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-trapecial-usando-altura-y-bases/main.pdf}
+        \begin{center}
+            \myFormula{$\myPolygonArea{ABCD} = \left(\dfrac{a+b}{2}\right) h$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-trapecial-usando-segmentos-de-puntos-medios-y-altura/main.pdf}
+        \begin{center}
+            \myFormula{$\myPolygonArea{ABCD} = MN \cdot h$}
+        \end{center}
+    \end{minipage}
+
+    \subsection{Relación de áreas en regiones trapeciales}
+
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-1/main.pdf}
+        \begin{center}
+            \myFormula{$S_1 = S_2$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-2/main.pdf}
+        \begin{center}
+            \myFormula{$S = \sqrt{S_1 \cdot S_2}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-3/main.pdf}
+        \begin{center}
+            \myFormula{$\myPolygonArea{ABCD} = \left(\sqrt{S_1} + \sqrt{S_2}\right)^2$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-4/main.pdf}
+        \begin{center}
+            \myFormula{$S = S_1 + S_2$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-5/main.pdf}
+        \begin{center}
+            \myFormula{$\myPolygonArea{ABCD} = CD \cdot MH$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-6/main.pdf}
+        \begin{center}
+            \myFormula{$S_1 = S_2$}
+        \end{center}
+    \end{minipage}
+
+    \subsection{Área de regiones paralelográmicas}
+
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-1/main.pdf}
+        \begin{center}
+            \myFormula{$S = b \cdot h$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-2/main.pdf}
+        \begin{center}
+            \myFormula{$S = m \cdot n$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-3/main.pdf}
+        \begin{center}
+            \myFormula{$S = a \cdot b \cdot \sin\left(\alpha\right)$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-4/main.pdf}
+        \begin{center}
+            \myFormula{$\myPolygonArea{ABCD} = \dfrac{AC \cdot BD}{2}$}
+        \end{center}
+    \end{minipage}
+
+    \subsection{Relación de áreas en regiones paralelográmicas}
+
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-paralelográmicas-1/main.pdf}
+        \begin{center}
+            \myFormula{$S_1 = S_2$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-paralelográmicas-2/main.pdf}
+        \begin{center}
+            \myFormula{$S_1 = S_2 = S_3 = S_4$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-paralelográmicas-3/main.pdf}
+        \begin{center}
+            \myFormula{$\myPolygonArea{AFD} = \dfrac{\myPolygonArea{ABCD}}{2}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-paralelográmicas-4/main.pdf}
+        Si $\overline{EF} \parallel \overline{AD}$ y $\overline{GH} \parallel \overline{AB}$, entonces:
+        \begin{center}
+            \myFormula{$S_1 = S_2$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-paralelográmicas-5/main.pdf}
+        Si $E \in \overline{AB}$, entonces:
+        \begin{center}
+            \myFormula{$S = S_1 + S_2$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-paralelográmicas-6/main.pdf}
+        Si $E$ está en el interior de $ABCD$, entonces:
+        \begin{center}
+            \myFormula{$S_1 + S_3 = S_2 + S_4 = \dfrac{\myPolygonArea{ABCD}}{2}$}
         \end{center}
     \end{minipage}
 
@@ -130,16 +259,17 @@
 \end{document}
 
 
-%% Template
+%% Plantilla
+%%
 %% \begin{minipage}{0.5\linewidth}
 %%     \includegraphics[width=\linewidth]{example-image-a}
 %%     \begin{center}
-%%         \myformula{$1 = 1$}
+%%         \myFormula{$0$}
 %%     \end{center}
 %% \end{minipage}
 %% \begin{minipage}{0.5\linewidth}
 %%     \includegraphics[width=\linewidth]{example-image-a}
 %%     \begin{center}
-%%         \myformula{$1 = 1$}
+%%         \myFormula{$0$}
 %%     \end{center}
 %% \end{minipage}
