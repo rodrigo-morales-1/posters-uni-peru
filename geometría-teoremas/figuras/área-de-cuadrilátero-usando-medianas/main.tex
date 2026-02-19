@@ -1,0 +1,88 @@
+\documentclass[tikz]{standalone}
+
+\input{../../colores.tex}
+
+\usetikzlibrary{calc, decorations.markings}
+
+\tikzset{
+    mark rect/.style={
+        decoration={markings, mark=at position 0.5 with {
+            \draw[draw=black, fill=white] (-6pt,-2pt) rectangle (6pt,2pt);
+        }}, postaction={decorate}
+    },
+    mark rhombus/.style={
+        decoration={
+            markings,
+            mark=at position 0.5 with {
+                \draw[solid, fill=white] (0,5pt) -- (2pt,0) -- (0,-5pt) -- (-2pt,0) -- cycle;
+            }
+        },
+        postaction={decorate}
+    },
+    mark one circle/.style={
+        decoration={markings, mark=at position 0.5 with {
+                \draw[fill=white] (0,0) circle (2pt);
+        }}, postaction={decorate}
+    },
+    mark two circles/.style={
+        decoration={markings, mark=at position 0.5 with {
+                \draw[fill=white] (-2pt,0) circle (2pt);
+                \draw[fill=white] (2pt,0) circle (2pt);
+        }}, postaction={decorate}
+    }
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+\coordinate (A) at (0, 0);
+\coordinate (B) at (1, 3);
+\coordinate (C) at (4, 4);
+\coordinate (D) at (5, 0);
+
+% Dibujar cuadrilátero
+\draw
+    (A) node[below left]{$A$}
+    -- (B) node[above left]{$B$}
+    -- (C) node[above right]{$C$}
+    -- (D) node[below right]{$D$}
+    -- cycle;
+
+% Hallar puntos medios de cada lado del cuadrilátero.
+\coordinate (MidpointAB) at ($(A)!0.5!(B)$);
+\coordinate (MidpointBC) at ($(B)!0.5!(C)$);
+\coordinate (MidpointCD) at ($(C)!0.5!(D)$);
+\coordinate (MidpointAD) at ($(D)!0.5!(A)$);
+
+% Dibujar medianas y nombrar los puntos medios de cada lado.
+\draw[dashed, line width = 1pt]
+   (MidpointAB) node [left] {$M$}
+-- (MidpointBC) node [above] {$N$}
+-- (MidpointCD) node [right] {$P$}
+-- (MidpointAD) node [below] {$Q$}
+-- cycle;
+
+% Colorear superficies.
+\fill[color=FilledSurfaceGroupOne] (MidpointAB) -- (MidpointBC) -- (B) -- cycle;
+\fill[color=FilledSurfaceGroupOne] (MidpointCD) -- (MidpointAD) -- (D) -- cycle;
+\fill[color=FilledSurfaceGroupTwo] (MidpointBC) -- (MidpointCD) -- (C) -- cycle;
+\fill[color=FilledSurfaceGroupTwo] (MidpointAD) -- (MidpointAB) -- (A) -- cycle;
+
+% Añadir marcadores a los segmentos determinados por las medianas.
+\draw[mark rect] (A) -- (MidpointAB);
+\draw[mark rect] (B) -- (MidpointAB);
+\draw[mark rhombus] (B) -- (MidpointBC);
+\draw[mark rhombus] (C) -- (MidpointBC);
+\draw[mark one circle] (C) -- (MidpointCD);
+\draw[mark one circle] (D) -- (MidpointCD);
+\draw[mark two circles] (D) -- (MidpointAD);
+\draw[mark two circles] (A) -- (MidpointAD);
+
+% Nombrar la superficie de cada triángulo.
+\node at (barycentric cs:MidpointAD=1,MidpointAB=1,A=1) {$S_1$};
+\node at (barycentric cs:MidpointAB=1,MidpointBC=1,B=1) {$S_2$};
+\node at (barycentric cs:MidpointBC=1,MidpointCD=1,C=1) {$S_3$};
+\node at (barycentric cs:MidpointCD=1,MidpointAD=1,D=1) {$S_4$};
+
+\end{tikzpicture}
+\end{document}
