@@ -15,9 +15,6 @@ El objetivo de estos posters es ayudar a los estudiantes del CEPREUNI y la Unive
    + Para hacer esto, necesitas tener conocimientos del comando =git= y como hacer un *pull request* en Github. Además, necesitas saber el lenguaje de marcado LaTeX. LaTeX es el lenguaje que ha sido usado para crear
 
 * ¿Qué es LaTeX?
-:PROPERTIES:
-:CREATED: [2026-02-19 12:17:06 -0500]
-:END:
 
 LaTeX es un [[https://www.wikidata.org/wiki/Special:GoToLinkedPage/eswiki/Q37045][lenguaje de marcado]] que se suele utilizar para escribir documentos que tienen fórmulas de matemática, química o física.
 
@@ -32,3 +29,7 @@ El bloque de abajo muestra un archivo de texto con la extensión =*.tex=. Nostro
 #+END_SRC
 
 Si aprendes a editar LaTeX, podrás modificar los posters de este repositorio a tu gusto (ejm, cambiar colores, eliminar secciones, etc.)
+
+* Licencia
+
+El código de este repositorio ha sido dedicado al dominio público bajo la licencia CC0 1.0 Universal. Cualquier persona puede copiar, modificar, distribuir e interpretar la obra, incluso para propósitos comerciales, sin pedir permiso. Más información en: https://creativecommons.org/publicdomain/zero/1.0/deed.es
