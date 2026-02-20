@@ -1,0 +1,21 @@
+\documentclass[tikz]{standalone}
+
+\input{../../colores.tex}
+
+\usetikzlibrary{calc, angles}
+
+\begin{document}
+\begin{tikzpicture}
+
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,4);
+\coordinate (C) at (8,0);
+
+\draw [fill=FilledSurfaceGroupOne] (A) node [below left]{$A$}
+      -- node [above left] {$c$} (B) node [above]{$B$}
+      -- node [above right] {$a$} (C) node [below right]{$C$}
+      -- node [below] {$b$} cycle;
+
+\end{tikzpicture}
+\end{document}
+

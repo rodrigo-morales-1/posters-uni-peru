@@ -33,6 +33,115 @@
 
 \begin{document}
 \begin{multicols*}{3}
+
+    \section{Área de regiones poligonales}
+
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-cuadrada/main.pdf}
+        \myFormula{$\myPolygonArea{ABCD} = l^2$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-rectangular/main.pdf}
+            \myFormula{$\myPolygonArea{ABCD} = a \cdot b$}
+        \end{center}
+    \end{minipage}
+
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-1/main.pdf}
+            \myFormula{$\myPolygonArea{ABCD} = b \cdot h$}
+        \end{center}
+    \end{minipage}
+
+    \section{Área de regiones triangulares}
+
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-triangular-1/main.pdf}
+        \myFormula{$\myPolygonArea{ABC} = \dfrac{bh}{2}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-triangular-2/main.pdf}
+            \myFormula{$\myPolygonArea{ABC} = \dfrac{bc}{2} \sin\left(\alpha\right)$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            \includegraphics[width=\linewidth]{figuras/área-de-región-triangular-3/main.pdf}
+            \par $p$: semiperímetro
+            \par $p = \dfrac{a+b+c}{2}$
+            \par \myFormula{$\myPolygonArea{ABC} = \sqrt{p \left(p-a\right)\left(p-b\right)\left(p-c\right)}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-triangular-en-función-del-inradio/main.pdf}
+        \par $p$: semiperímetro
+        \par $p = \dfrac{a+b+c}{2}$
+        \par \myFormula{$\myPolygonArea{ABC} = p \cdot r$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+        \includegraphics[width=\linewidth]{figuras/área-de-región-triangular-en-función-del-exradio/main.pdf}
+        \par $p$: semiperímetro
+        \par $p = \dfrac{a+b+c}{2}$
+        \par \myFormula{$\myPolygonArea{ABC} = r_a \left(p-a\right)$}
+        \end{center}
+    \end{minipage}
+
+    \subsection{Relación de áreas en regiones triangulares}
+
+    \begin{minipage}{\linewidth}
+        \begin{center}
+            Teorema
+            \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-1/main.pdf}
+            Si $BH = NP$, entonces:
+            \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{b}{n}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            Corolario
+            \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-2/main.pdf}
+            Si $\overline{BM}$ es mediana, entonces:
+            \myFormula{$\myPolygonArea{ABM} = \myPolygonArea{MBC}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \begin{center}
+            Corolario
+            \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-3/main.pdf}
+            En un triángulo, al trazar las tres medianas, se determinan seis regiones triangulares equivalentes.
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{\linewidth}
+        \begin{center}
+            \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-4/main.pdf}
+            Si $\alpha = \theta$, entonces:
+            \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{bc}{nl}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{\linewidth}
+        \begin{center}
+            \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-5/main.pdf}
+            Si $\alpha + \theta = 180$, entonces:
+            \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{bc}{nl}$}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{\linewidth}
+        \begin{center}
+            \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-6/main.pdf}
+            Si $\triangle ABC \sim \triangle MNL$, entonces:
+            \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{a^2}{m^2} = \dfrac{b^2}{n^2} + \dfrac{c^2}{l^2} = \dfrac{H^2}{h^2} = \dfrac{R^2}{r^2} = k^2$}
+        \end{center}
+    \end{minipage}
+
     \section{Área de regiones cuadrángulares}
 
     \begin{minipage}{0.5\linewidth}
@@ -150,37 +259,37 @@
     \subsection{Relación de áreas en regiones trapeciales}
 
     \begin{minipage}{0.5\linewidth}
-        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-1/main.pdf}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-trapeciales-1/main.pdf}
         \begin{center}
             \myFormula{$S_1 = S_2$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
-        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-2/main.pdf}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-trapeciales-2/main.pdf}
         \begin{center}
             \myFormula{$S = \sqrt{S_1 \cdot S_2}$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
-        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-3/main.pdf}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-trapeciales-3/main.pdf}
         \begin{center}
             \myFormula{$\myPolygonArea{ABCD} = \left(\sqrt{S_1} + \sqrt{S_2}\right)^2$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
-        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-4/main.pdf}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-trapeciales-4/main.pdf}
         \begin{center}
             \myFormula{$S = S_1 + S_2$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
-        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-5/main.pdf}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-trapeciales-5/main.pdf}
         \begin{center}
             \myFormula{$\myPolygonArea{ABCD} = CD \cdot MH$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
-        \includegraphics[width=\linewidth]{figuras/relación-de-areas-en-regiones-trapeciales-6/main.pdf}
+        \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-trapeciales-6/main.pdf}
         \begin{center}
             \myFormula{$S_1 = S_2$}
         \end{center}
