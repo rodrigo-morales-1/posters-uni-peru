@@ -18,6 +18,7 @@
 \usepackage{amsmath}
 
 \newtcbox{\myFormula}{
+    on line,
     colback=FormulaBackground, % Sets the background color
     colframe=FormulaFrame,     % Sets the border frame color
     boxrule=1pt,             % Defines the thickness of the outer border frame
@@ -36,22 +37,21 @@
 
     \section{Área de regiones poligonales}
 
-    \begin{minipage}{0.5\linewidth}
+    \begin{minipage}[t]{0.33\linewidth}
         \begin{center}
-        \includegraphics[width=\linewidth]{figuras/área-de-región-cuadrada/main.pdf}
-        \myFormula{$\myPolygonArea{ABCD} = l^2$}
+            \includegraphics[width=\linewidth]{figuras/área-de-región-cuadrada/main.pdf}
+            \myFormula{$\myPolygonArea{ABCD} = l^2$}
         \end{center}
     \end{minipage}
-    \begin{minipage}{0.5\linewidth}
+    \begin{minipage}[t]{0.33\linewidth}
         \begin{center}
-        \includegraphics[width=\linewidth]{figuras/área-de-región-rectangular/main.pdf}
+            \includegraphics[width=\linewidth]{figuras/área-de-región-rectangular/main.pdf}
             \myFormula{$\myPolygonArea{ABCD} = a \cdot b$}
         \end{center}
     \end{minipage}
-
-    \begin{minipage}{0.5\linewidth}
+    \begin{minipage}[t]{0.33\linewidth}
         \begin{center}
-        \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-1/main.pdf}
+            \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-1/main.pdf}
             \myFormula{$\myPolygonArea{ABCD} = b \cdot h$}
         \end{center}
     \end{minipage}
@@ -101,16 +101,14 @@
         \begin{center}
             Teorema
             \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-1/main.pdf}
-            Si $BH = NP$, entonces:
-            \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{b}{n}$}
+            Si $BH = NP$, entonces \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{b}{n}$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \begin{center}
             Corolario
             \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-2/main.pdf}
-            Si $\overline{BM}$ es mediana, entonces:
-            \myFormula{$\myPolygonArea{ABM} = \myPolygonArea{MBC}$}
+            Si $\overline{BM}$ es mediana, entonces \myFormula{$\myPolygonArea{ABM} = \myPolygonArea{MBC}$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
@@ -122,13 +120,14 @@
     \end{minipage}
     \begin{minipage}{\linewidth}
         \begin{center}
+            Teorema
             \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-4/main.pdf}
-            Si $\alpha = \theta$, entonces:
-            \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{bc}{nl}$}
+            Si $\alpha = \theta$, entonces \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{bc}{nl}$}
         \end{center}
     \end{minipage}
     \begin{minipage}{\linewidth}
         \begin{center}
+            Teorema
             \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-5/main.pdf}
             Si $\alpha + \theta = 180$, entonces:
             \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{bc}{nl}$}
@@ -136,6 +135,7 @@
     \end{minipage}
     \begin{minipage}{\linewidth}
         \begin{center}
+            Teorema
             \includegraphics[width=\linewidth]{figuras/relación-de-áreas-en-regiones-triangulares-6/main.pdf}
             Si $\triangle ABC \sim \triangle MNL$, entonces:
             \myFormula{$\dfrac{\myPolygonArea{ABC}}{\myPolygonArea{MNL}} = \dfrac{a^2}{m^2} = \dfrac{b^2}{n^2} + \dfrac{c^2}{l^2} = \dfrac{H^2}{h^2} = \dfrac{R^2}{r^2} = k^2$}
@@ -300,19 +300,19 @@
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-1/main.pdf}
         \begin{center}
-            \myFormula{$S = b \cdot h$}
+            \myFormula{$\myPolygonArea{ABCD} = b \cdot h$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-2/main.pdf}
         \begin{center}
-            \myFormula{$S = m \cdot n$}
+            \myFormula{$\myPolygonArea{ABCD} = m \cdot n$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
         \includegraphics[width=\linewidth]{figuras/área-de-región-paralelográmica-3/main.pdf}
         \begin{center}
-            \myFormula{$S = a \cdot b \cdot \sin\left(\alpha\right)$}
+            \myFormula{$\myPolygonArea{ABCD} = a \cdot b \cdot \sin\left(\alpha\right)$}
         \end{center}
     \end{minipage}
     \begin{minipage}{0.5\linewidth}
