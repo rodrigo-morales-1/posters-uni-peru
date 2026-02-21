@@ -12,10 +12,10 @@
 % The package geometry allows to reduce the margin
 \usepackage[
     a2paper,
-    top=1.5cm,
+    top=2.5cm,
     left=0.5cm,
     right=0.5cm,
-    bottom=1.5cm
+    bottom=2.5cm
 ]{geometry}
 
 \usepackage{titlesec}
@@ -37,25 +37,39 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 
+% +------------------------------+
+% |                              |
+% | Borde alrededor de la página |
+% |                              |
+% +------------------------------+
+
+\usepackage{scrlayer-scrpage}
+\newcommand{\jamanta}{\tikz[remember picture,overlay]
+    \draw [black,line width=2mm]
+    (current page.south west)
+    rectangle
+    (current page.north east)
+    ;}
+% \chead stands for "Center Header". It is a command provided by the
+% scrlayer-scrpage package used to define what appears in the
+% top-middle portion of the page.
+\chead[\jamanta]{\jamanta}
+
 % +----------------------------+
 % |                            |
 % | Encabezado y pie de página |
 % |                            |
 % +----------------------------+
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{%
-    \fontsize{30pt}{30pt}\selectfont
-    \bfseries{Identidades trigonométricas}
-}
-\fancyfoot[L]{%
-    \fontsize{30pt}{30pt}\selectfont
-    Descarga otros posters, contribuye y obtén el código fuente en: 
-}
-\renewcommand{\headrulewidth}{1pt}
-\renewcommand{\footrulewidth}{1pt}
+% Contenido a la izquierda en el encabezado
+\ihead{\fontsize{30pt}{36pt}\selectfont Identidades trigonométricas}
+% Contenido a la izquierda en el pie de página
+\ifoot{\fontsize{30pt}{48pt}\selectfont Left Footer}
+% Contenido a la derecha en el pie de página
+\ofoot{\fontsize{30pt}{48pt}\selectfont Hecho con \LaTeX}
+
+\setheadsepline{1pt} % Ancho de la línea horizontal bajo el encabezado de la página
+\setfootsepline{1pt} % Ancho de la línea horizontal arriba del pie de página
 
 % +-----------------------+
 % |                       |
