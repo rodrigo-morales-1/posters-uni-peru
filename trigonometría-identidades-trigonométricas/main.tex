@@ -15,7 +15,7 @@
     top=2.5cm,
     left=0.5cm,
     right=0.5cm,
-    bottom=2.5cm
+    bottom=2cm
 ]{geometry}
 
 \usepackage{titlesec}
@@ -61,14 +61,16 @@
 % |                            |
 % +----------------------------+
 
+% Fuente usada en el encabezado y pie de página
+\setkomafont{pageheadfoot}{\normalfont}
 % Contenido a la izquierda en el encabezado
-\ihead{\fontsize{30pt}{36pt}\selectfont Identidades trigonométricas}
+\ihead{\fontsize{30pt}{36pt}\selectfont \bfseries Identidades trigonométricas}
 % Contenido a la derecha en el encabezado
 \ohead{}
 % Contenido a la izquierda en el pie de página
-\ifoot{\fontsize{30pt}{48pt}\selectfont Left Footer}
+\ifoot{\fontsize{20pt}{30pt}\selectfont Descarga otros posters, contribuye y obtén el código fuente en: }
 % Contenido a la derecha en el pie de página
-\ofoot{\fontsize{30pt}{48pt}\selectfont Hecho con \LaTeX}
+\ofoot{\fontsize{20pt}{30pt}\selectfont Hecho con \LaTeX}
 
 \setheadsepline{1pt} % Ancho de la línea horizontal bajo el encabezado de la página
 \setfootsepline{1pt} % Ancho de la línea horizontal arriba del pie de página
