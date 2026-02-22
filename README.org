@@ -20,13 +20,17 @@ LaTeX es un [[https://www.wikidata.org/wiki/Special:GoToLinkedPage/eswiki/Q37045
 
 El bloque de abajo muestra un archivo de texto con la extensión =*.tex=. Nostros al pasarle ese archivo a LaTeX, generaremos un archivo PDF que muestra el texto =¡Hola mundo!=.
 
-#+BEGIN_SRC tex-doc
+#+BEGIN_SRC tex
 \documentclass{article}
 
 \begin{document}
 ¡Hola mundo!
+
+Esta es una fórmula de matemática $\sin^2(x) + cos^2(x) = 1$ y esta es una fórmula de física: $E = mc^2$.
 \end{document}
 #+END_SRC
+
+[[file:./ejemplo-latex.jpg]]
 
 Si aprendes a editar LaTeX, podrás modificar los posters de este repositorio a tu gusto (ejm, cambiar colores, eliminar secciones, etc.)
 
