@@ -15,8 +15,14 @@
     top=2.5cm,
     left=0.5cm,
     right=0.5cm,
-    bottom=2cm
+    bottom=2.5cm
 ]{geometry}
+
+% El paquete "graphbox" nos permite alinear una imagen que es mostrada
+% en una oración verticalmente con el contenido de la oración. Si no
+% usamos "graphbox", el texto de un párrafo sera alineado con la parte
+% más baja de la imagen en una línea.
+\usepackage{graphbox}
 
 \usepackage{titlesec}
 \titleformat{\section}  % which section command to format
@@ -68,9 +74,9 @@
 % Contenido a la derecha en el encabezado
 \ohead{}
 % Contenido a la izquierda en el pie de página
-\ifoot{\fontsize{20pt}{30pt}\selectfont Descarga otros posters, contribuye y obtén el código fuente en: }
+\ifoot{\fontsize{20pt}{30pt}\selectfont Descarga otros posters, contribuye y obtén el código fuente en: \includegraphics[height=35pt, align=c]{../qr.png}}
 % Contenido a la derecha en el pie de página
-\ofoot{\fontsize{20pt}{30pt}\selectfont Hecho con \LaTeX}
+\ofoot{}
 
 \setheadsepline{1pt} % Ancho de la línea horizontal bajo el encabezado de la página
 \setfootsepline{1pt} % Ancho de la línea horizontal arriba del pie de página
@@ -128,10 +134,9 @@
 
 \begin{document}
 
-
 \fontsize{14pt}{14pt}\selectfont
 
-\begin{multicols}{3}
+\begin{multicols*}{3}
 \section{Identidades trigonométricas de ángulos simples}
 
 \textbf{Identidades de las razones trigonométricas recíprocas}
@@ -412,5 +417,5 @@ Teoremas adicionales
   \item $\displaystyle \prod_{k=1}^{n} \tan \left(\dfrac{k \pi}{2n + 1}\right) \myequal \sqrt{2n+1}$
 \end{itemize}
 
-\end{multicols}
+\end{multicols*}
 \end{document}
