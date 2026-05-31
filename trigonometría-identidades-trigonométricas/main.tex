@@ -12,10 +12,10 @@
 % The package geometry allows to reduce the margin
 \usepackage[
     a2paper,
-    top=2.4cm,
+    top=2.3cm,
     left=0.5cm,
     right=0.5cm,
-    bottom=2.5cm
+    bottom=2.3cm
 ]{geometry}
 
 % El paquete "graphbox" nos permite alinear una imagen que es mostrada
@@ -31,6 +31,7 @@
   {1em} % space between number and text
   {} % formatting for just the text
   [] % formatting for after the text
+\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{0ex}
 
 \titleformat{\subsection}
   {\fontsize{18}{18}\bfseries\color{blue}} % format for whole line
@@ -74,7 +75,7 @@
 % Contenido a la derecha en el encabezado
 \ohead{}
 % Contenido a la izquierda en el pie de página
-\ifoot{\fontsize{20pt}{30pt}\selectfont Descarga otros posters, contribuye y obtén el código fuente en: \includegraphics[height=35pt, align=c]{../qr.png}}
+\ifoot{\fontsize{20pt}{30pt}\selectfont Descarga otros posters, contribuye y obtén el código fuente de este poster en: \includegraphics[height=35pt, align=c]{../qr.png}}
 % Contenido a la derecha en el pie de página
 \ofoot{}
 
@@ -141,9 +142,7 @@
 % +--------------------------------------------------
 
 \begin{document}
-
 \fontsize{14pt}{14pt}\selectfont
-
 \begin{multicols*}{3}
 \section{Identidades trigonométricas de ángulos simples}
 
@@ -273,7 +272,7 @@ Si $\exists k \in \mathbb{Z} \colon x + y + z = \displaystyle \left(2k+1\right)\
     \item $\tan\left(\dfrac{x}{2}\right) \myequal \pm \sqrt{\dfrac{1 - \cos\left(x\right)}{1 + \cos\left(x\right)}}$
 \end{itemize}
 
-El signo de $\sin\left(\frac{x}{2}\right)$, $\cos\left(\frac{x}{2}\right)$ y $\tan\left(\frac{x}{2}\right)$ depende del cuadrante en el que se encuentra el lado final de $\frac{x}{2}$ y el signo de $\text{RT}\left(\frac{x}{2}\right)$ en ese cuadrante.
+El signo de $\sin\left(\frac{x}{2}\right)$, $\cos\left(\frac{x}{2}\right)$ y $\tan\left(\frac{x}{2}\right)$ depende del cuadrante en el que se encuentra el lado final de $\frac{x}{2}$ y el signo de $\text{R.T.}\left(\frac{x}{2}\right)$ en ese cuadrante.
 
 \myheading{Identidades auxiliares}
 
@@ -335,6 +334,8 @@ Transformación de diferencia de cosenos a producto.
 \begin{itemize}
   \item $\cos\left(\alpha\right) - \cos\left(\beta\right) \myequal - 2 \sin\left(\dfrac{\alpha + \beta}{2}\right) \sin\left(\dfrac{\alpha - \beta}{2}\right)$
 \end{itemize}
+
+\columnbreak
 
 \myheading{Identidades auxiliares}
 
