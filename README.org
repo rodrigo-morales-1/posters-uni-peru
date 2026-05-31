@@ -2,9 +2,9 @@
 
 * Introducción
 
-Este repositorio contiene posters que listan fórmulas y expresiones que son comúnmente usadas en los cursos de ciencias del CEPREUNI y en los cursos generales de los primeros ciclos de la Universidad Nacional de Ingeniería.
+Este repositorio contiene posters que listan fórmulas y expresiones que son comúnmente usadas en los cursos de ciencias del CEPREUNI y en los cursos generales de los primeros ciclos de la Universidad Nacional de Ingeniería. El objetivo de estos posters es ayudar a los estudiantes recordar las fórmulas que suelen ser relevantes al resolver ejercicios.
 
-El objetivo de estos posters es ayudar a los estudiantes del CEPREUNI y la Universidad Nacional de Ingeniería a memorizar esas fórmulas y expresiones. Esto lo logramos listándolas de manera ordenada y clara.
+Al brindar el código fuente de los posters, cada estudiante tiene la libertad de modificar los posters según lo consideren necesario. Por ejemplo, pueden cambiar los colores usados en los gráficos, cambiar el espaciado entre líneas, eliminar/añadir formulas o secciones, etc.
 
 * ¿Cómo contribuir?
 
@@ -13,8 +13,8 @@ El objetivo de estos posters es ayudar a los estudiantes del CEPREUNI y la Unive
 1. Reporta algún error en algún poster o sugiere una mejora creando un *issue* en este repositorio
    + Para hacer esto, necesitas crear una cuenta de Github. Luego de crear la cuenta, visitar [[https://github.com/rodrigo-morales-1/posters-uni-peru][este repositorio]], ir a la ventana *Issues* y presionar en "*New Issue*"
    + Hacer esto es similar a crear una publicación en un foro de Internet
-2. Proponer un cambio en el código haciendo un *pull request*
-   + Para hacer esto, necesitas tener conocimientos del comando =git= y como hacer un *pull request* en Github. Además, necesitas saber el lenguaje de marcado LaTeX. LaTeX es el lenguaje que ha sido usado para crear
+2. Crear *pull requests*
+   + Para hacer esto, necesitas tener conocimientos del comando =git= y como hacer un *pull request*. Además, necesitas conocer lo básico de LaTeX.
 
 * ¿Qué es LaTeX?
 
@@ -35,6 +35,8 @@ Esta es una fórmula de matemática $\sin^2(x) + cos^2(x) = 1$ y esta es una fó
 [[file:./ejemplo-latex.jpg]]
 
 Si aprendes a editar LaTeX, podrás modificar los posters de este repositorio a tu gusto (ejm, cambiar colores, eliminar secciones, etc.)
+
+Para convertir un archivo =*.tex= (extensión de documentos de LaTeX) a un archivo =*.pdf=, es necesario tener instalado un compilador de LaTeX. Una alternativa a instalar un compilador que es más accesible para principiantes es usar un compilador online en tu navegador web (ejm. [[https://es.overleaf.com/][Overleaf]]).
 
 * Licencia
 
