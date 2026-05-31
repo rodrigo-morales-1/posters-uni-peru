@@ -1,4 +1,4 @@
-**NOTA:** Para descargar los posters en formato =*.jpg= o =*.pdf=. Visitar la sección *Releases*: https://github.com/rodrigo-morales-1/posters-uni-peru/releases
+*NOTA:* Para descargar los posters en formato =*.jpg= o =*.pdf=. Visitar la sección **Releases**: https://github.com/rodrigo-morales-1/posters-uni-peru/releases
 
 * Introducción
 
