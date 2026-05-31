@@ -1,0 +1,27 @@
+%#!xelatex main.tex
+
+\documentclass[pstricks]{standalone}
+
+\usepackage{pst-solides3d}
+
+\begin{document}
+
+\begin{pspicture}(-2.5,-2.4)(2.5,2)
+\psset{solidmemory, viewpoint=50 20 20 rtp2xyz, lightsrc=viewpoint, Decran=40}
+\psSolid[
+    action=draw*,
+    object=cube,
+    fillcolor=white,
+    a=3,
+    name=mycube]
+\psSolid[object=point, definition=solidgetsommet, action=none, args=mycube 0, text=A, pos=dl]
+\psSolid[object=point, definition=solidgetsommet, action=none, args=mycube 1, text=B, pos=ub]
+\psSolid[object=point, definition=solidgetsommet, action=none, args=mycube 2, text=C, pos=ub]
+\psSolid[object=point, definition=solidgetsommet, action=none, args=mycube 3, text=D, pos=dl]
+\psSolid[object=point, definition=solidgetsommet, action=none, args=mycube 4, text=E, pos=dr]
+\psSolid[object=point, definition=solidgetsommet, action=none, args=mycube 5, text=F, pos=br]
+\psSolid[object=point, definition=solidgetsommet, action=none, args=mycube 6, text=G, pos=bl]
+\psSolid[object=point, definition=solidgetsommet, action=none, args=mycube 7, text=H, pos=dl]
+\psSolid[object=plan, definition=solidface, args=mycube 5, action=draw]
+\end{pspicture}
+\end{document}

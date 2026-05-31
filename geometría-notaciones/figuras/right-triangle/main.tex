@@ -1,0 +1,15 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{calc,angles}
+
+\begin{document}
+\begin{tikzpicture}[scale=1]
+    \coordinate (A) at (0,0);
+    \coordinate (C) at (0,2);
+    \coordinate (B) at (2,0);
+    \draw (A) -- (B) -- (C) -- cycle;
+    \path pic [draw,angle radius=2mm] {right angle = C--A--B};
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[above left] at (C) {$C$};
+\end{tikzpicture}
+\end{document}

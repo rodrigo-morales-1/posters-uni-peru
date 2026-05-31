@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{geometry}
+\geometry{margin = 1cm}
+\setlength{\footskip}{10pt}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    urlcolor = blue
+}
+
+\usepackage{svg}
+
+\newcommand\myrighttriangle{\includegraphics[height=10pt]{graphics/right-triangle-symbol/main.pdf}\ }
+
+\begin{document}
+
+\section{Triángulos}
+
+\textbf{Triángulo:} $\triangle ABC$
+
+\includegraphics{graphics/triangle/main.pdf}
+
+\textbf{Triángulo rectángulo:} \myrighttriangle $ABC$
+
+\includegraphics{graphics/right-triangle/main.pdf}
+
+\textbf{Triángulos semejantes:} $\triangle ABC \sim \triangle DEF$
+
+\includegraphics{graphics/similar-triangles/main.pdf}
+
+\section{Poliedros}
+
+\textbf{Tetraedro:} $D-ABC$
+
+\includegraphics{graphics/tetrahedron/main.pdf}
+
+\textbf{Hexaedro:} $ABCD-EFGH$
+
+\includegraphics{graphics/hexahedron/main.pdf}
+
+Codigo fuente disponible en \url{https://github.com/rodrigo-morales-1/cepreuni-symbols-latex} \includesvg[width = 50pt]{qr-code-source-code.svg}
+
+\end{document}
