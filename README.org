@@ -1,3 +1,5 @@
+**NOTA:** Para descargar los posters en formato =*.jpg= o =*.pdf=. Visitar la sección *Releases*: https://github.com/rodrigo-morales-1/posters-uni-peru/releases
+
 * Introducción
 
 Este repositorio contiene posters que listan fórmulas y expresiones que son comúnmente usadas en los cursos de ciencias del CEPREUNI y en los cursos generales de los primeros ciclos de la Universidad Nacional de Ingeniería.
