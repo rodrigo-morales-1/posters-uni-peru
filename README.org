@@ -38,7 +38,7 @@ Esta es una fórmula de matemática $\sin^2(x) + cos^2(x) = 1$ y esta es una fó
 
 Si aprendes a editar LaTeX, podrás modificar los posters de este repositorio a tu gusto (ejm, cambiar colores, eliminar secciones, etc.)
 
-Para convertir un archivo =*.tex= (extensión de documentos de LaTeX) a un archivo =*.pdf=, es necesario tener instalado un compilador de LaTeX. Una alternativa a instalar un compilador que es más accesible para principiantes es usar un compilador online en tu navegador web (ejm. [[https://es.overleaf.com/][Overleaf]]).
+Para convertir un archivo =*.tex= (extensión de documentos de LaTeX) a un archivo =*.pdf=, es necesario tener instalado un compilador de LaTeX. Una alternativa a instalar un compilador que es más accesible para principiantes es usar un compilador online en tu navegador web (ejm. [[https://es.overleaf.com/][Overleaf]]). Overleaf es gratis, solo es necesario registrarse para poder usar el compilador online.
 
 * Licencia
 
